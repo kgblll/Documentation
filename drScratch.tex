@@ -1,0 +1,209 @@
+%Dr.Scratch's Documentation
+%Author: Mari Luz Aguado Jiménez
+
+%PREAMBLE
+\documentclass[a4paper, 12pt]{book}
+
+\usepackage{lmodern}
+\usepackage{fontenc}
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
+\usepackage{mathtools}
+\usepackage{color}
+\usepackage[latin1]{inputenc}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage[nottoc, notlot, notlof, notindex]{tocbibind} 
+
+
+\title{Dr.Scratch Documentation}
+\author{Mari Luz Aguado Jiménez}
+\renewcommand{\baselinestretch}{1.5}  %% Interlineado
+\date{11 March 2015}
+%//END PREAMBLE
+
+%BODY OF THE DOCUMENT
+\begin{document}
+
+%\renewcommand{\refname}{Bibliografía}  %% Renombrando
+\renewcommand{\appendixname}{Apéndice}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+				% PORTADA %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\begin{center}
+
+\begin{tabular}[c]{c c}
+\vspace{2cm}
+\end{tabular}
+
+
+
+\begin{tabular}[c]{c c}
+\Huge
+DR.SCRATCH'S DOCUMENTATION
+\end{tabular}
+
+\vspace{6cm}
+
+\includegraphics[scale=0.7]{img/logoURJC.jpg}
+\begin{tabular}[b]{l}
+\includegraphics[scale=0.7]{img/logoProgramamos.png} 
+\end{tabular}
+\\
+\includegraphics[scale=0.5]{img/logoLibresoft.jpg}
+\begin{tabular}[b]{l}
+\includegraphics[scale=0.5]{img/logoFECYT.png} 
+\end{tabular}
+
+
+\vspace{2.5cm}
+
+\vspace{4cm}
+
+\large
+2014/2015
+\end{center}
+\end{titlepage}
+
+\newpage
+\mbox{}
+\thispagestyle{empty} % don't show anything in this page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			% INDEX %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{}
+\pagenumbering{Roman} % Roman numerals
+\begin{flushright}
+\textit{Our passion is our strength.}
+\end{flushright}
+
+
+\tableofcontents  % Index of contents
+\cleardoublepage
+\listoffigures % Index of figures
+%\cleardoublepage
+%\listoftables % Index of tables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		      % INTRODUCTION %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\pagenumbering{arabic} % Arabic numerals
+\chapter{Getting started with Dr.Scratch}
+\label{sec:beginning} % to refer in the text ~\ref{sec:introduction}
+\section{The beginning} 
+\setlength{\parskip}{8mm}
+
+\textsl{'
+Dr.Scratch is a web application to analyze your own (or their students) Scratch
+projects. Feedback is given in a variety of areas Computational Thinking. That
+way, you or your students can be able to learn and improve your programming
+skills.'}
+
+To begin with, we want to show the evolution of Dr.Scratch and how it works
+without going into technical details. The reason of this is we would like have
+a view of our errors at the beginning and how we did solve thank to the
+feedback of our users.
+
+Dr.Scratch begins as a simple idea, correct bad habits that many students can
+acquire programming. Is being introduced the Scratch environment as a tool to
+teach programming skills or develop computational thinking is increasingly
+common in all levels of education and Dr.Scratch tries to help in this mission.
+ 
+At first, we thought about the Scratch projects which you can download from
+Scratch web how the Figure~\ref{figure:download} shows. It allows you to have your project in your own computer and upload it to
+Dr.Scratch to be analyzing. 
+ 
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{img/download.png}
+    \caption{Downloading a project from Scratch to your computer.}
+    \label{figure:download}
+\end{figure}
+
+The first appearance that we designed was very simple to use this option and it 
+helped us to implement the functionality of upload of file and analysis. You
+can take a look at the Figure~\ref{figure:first-appearance} shows.
+
+ \begin{figure}
+   	\centering
+   	\includegraphics[scale=0.7]{img/first-appearance.png}
+   	\caption{First Appearance of Dr.Scratch.}
+   	\label{figure:first-appearance}
+\end{figure}
+ 
+You could choose a file (previously downloaded from Scratch), click
+`` Send '' to analyze and find code smells with the information 
+provided on the dashboard that Dr.Scratch showed  after a few seconds.
+   
+
+Also you had got extra information:
+\setlength{\parskip}{2mm}
+\begin{itemize}
+
+   	\item A demo video explaining how to use Dr.Scratch to improve your 
+   	programming skills.
+   	\item A contact section where you could find our e-mail and twitter to write
+   	us if you wanted.
+	\item The new features that we wanted to develop in that moment.
+	\item The posibility to sign in on the top.
+\end{itemize}
+\setlength{\parskip}{8mm}
+When you clicked on ``Send'' Dr.Scratch uploaded your project to our server
+without to save any additional information. After that, we used and
+still use some plug-ins (which will be described later) to analyze the 
+project and showed the dashboard you can see in the 
+Figure~\ref{figure:first-dashboard}.
+
+The dashboard gives you information in detail about several aspects which are
+related to Computational Thinking like: 
+\setlength{\parskip}{0mm}
+\begin{itemize}
+  	\setlength{\parskip}{0mm}
+   	\item Logic
+   	\item Abstraction
+	\item Parallelization
+	\item Synchronization
+	\item Flow Control
+	\item User Interactivity
+	\item Data Representation
+\end{itemize}
+
+\begin{figure}
+   	\centering
+   	\includegraphics[scale=0.3]{img/first-dashboard.png}
+   	\caption{First Dashboard of Dr.Scratch.}
+   	\label{figure:first-dashboard}
+\end{figure}
+
+In accordance with these aspects, your project will have a score that is showed
+in the top with the title ``CT Score'' and gives you a idea about your level.
+
+The other information provided tells about those habits which some programmers
+can acquire when starts in this world. We have started with four of these bad
+habits:
+\setlength{\parskip}{0mm}
+\begin{enumerate}
+  	\setlength{\parskip}{0mm}
+   	\item Duplicated scripts
+   	\item Sprite naming
+	\item Dead code
+	\item Sprite attributes initialization
+\end{enumerate}
+
+
+This appearance was in production since November of 2014 until March of 
+2015. Although it was very simple, had high acceptance. We reckon this was 
+the reason of his successful. But we have a long way to go, in fact, we are
+including new features and appearances trying to get close to the final product.
+These new features and appearances will be described in the following section
+explaining why we thought it was a good idea add it.
+
+
+\section{Always improving}
+
+
+
+\end{document}
