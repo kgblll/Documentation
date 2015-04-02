@@ -1,0 +1,7 @@
+1.Presentación breve: explicar que queremos probar una herramienta que estamos diseñando y queremos ver si resulta útil para niños de su edad que programan con Scratch. Explicarles que queremos conocer su opinión sincera, y que les vamos a repartir un documento, en el que no tienen que poner el nombre, para que contesten unas preguntas. Les recordamos que si se atascan en algún paso o no entienden algo, queremos que nos lo comuniquen: no deben sentirse mal si eso ocurre, ya que en todo caso es un problema de la herramienta que no está bien diseñada.
+
+2. Repartimos el documento, que contiene una serie de tareas que deben realizar, y una serie de preguntas sobre cada tarea realizada. Mientras ellos van realizando las tareas, nosotros podemos ir fijándonos en las dificultades que se vayan produciendo. Incluso nos podríamos sentar con algún alumno que veamos más "dicharachero" y pedirle que nos vaya contando sus sensaciones al usar la herramienta.
+
+3. Al finalizar las tareas podemos entregarles una pegatina de Dr. Scratch y un diploma.
+
+4. Si nos sobra tiempo, podemos hacer alguna demo chula con Scratch con audio y con vídeo.
