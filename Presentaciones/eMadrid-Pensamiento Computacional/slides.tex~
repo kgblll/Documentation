@@ -28,7 +28,7 @@
 
 %% Metadatos del PDF.
 \hypersetup{
-  pdftitle={Automatic Detection of Bad Programming Habits in Scratch: A Preliminary Study},
+  pdftitle={ Dr. Scratch, análisis de proyectos Scratch para medir el desarrollo del Pensamiento Computacional y mejorar las habilidades de programación},
   pdfauthor={Jesús Moreno León, Gregorio Robles},
   pdfcreator={GSyC/LibreSoft \\ Universidad Rey Juan Carlos},
   pdfproducer=PDFLaTeX,
@@ -38,12 +38,12 @@
 
 \begin{document}
 
-\title{Automatic Detection of Bad Programming Habits in Scratch}
-\subtitle{A Preliminary Study}
+\title{Dr. Scratch}
+\subtitle{Análisis de proyectos Scratch para medir el desarrollo del Pensamiento Computacional y mejorar las habilidades de programación}
 \institute{jesus.moreno@programamos.es, grex@gsyc.urjc.es \\
 GSyC/Libresoft, Universidad Rey Juan Carlos}
 \author{Jesús Moreno León, Gregorio Robles}
-\date{FIE 2014, Madrid, October 23 2014}
+\date{Seminario eMadrid, Fuenlabrada, 17 de abril de 2015}
 
 \frame{
 \maketitle
@@ -71,7 +71,7 @@ GSyC/Libresoft, Universidad Rey Juan Carlos}
 \includegraphics[width=2.2cm]{figs/by-sa}
 
 {\tiny
-(cc) 2014 Gregorio Robles and Jesús Moreno León\\
+(cc) 2015 Gregorio Robles and Jesús Moreno León\\
   Some rights reserved. This work licensed under Creative Commons \\
   Attribution-ShareAlike License. To view a copy of full license, see \\
   http://creativecommons.org/licenses/by-sa/3.0/ or write to \\
@@ -86,66 +86,75 @@ For those images, \emph{fair use} applies.
 }
 %%
 
-\section{FIE 2014 - eMadrid Session}
+\section{Seminario eMadrid sobre Pensamiento Computacional}
 
 
 %--------------------------------------------------------
-\usebackgroundtemplate{\includegraphics[width=17.8cm]{figs/AngryBirds.png}}
+\usebackgroundtemplate{\includegraphics[width=18cm]{figs/AngryBirds.png}}
 
 \begin{frame}
-\frametitle{Goal of our paper}
+\frametitle{¿Qué es Scratch?}
 
 \begin{center}
-\Huge {\bf Are bad programming habits a common practice in the Scratch community?}
+\Huge {\bf Programación para todos. Programar para aprender.}
 \end{center}
 
 \end{frame}
 
-
-%-----------------------    ---------------------------------
-\usebackgroundtemplate{\includegraphics[width=14cm]{figs/audience.png}}
-% http://cdn.netrafic.com/wp-content/uploads/2011/02/audience.gif
-
-\begin{frame}
-\frametitle{Audience}
-
-Who should/could be interested in this talk?
-
-\begin{itemize}
-  \item Educators teaching how to code
-  \item Students learning to program
-  \item Developers of programming learning tools
-\end{itemize} 
-
-\end{frame}
-
 \usebackgroundtemplate{}
 %--------------------------------------------------------
+%\usebackgroundtemplate{\includegraphics[width=18cm]{figs/stats.png}}
+
 \begin{frame}
-\frametitle{Scratch}
+\frametitle{¿Quién usa Scratch?}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=10cm, height=6cm]{figs/stats.png}
+\end{center}
+\label{fig:naming}
+\end{figure}
+\begin{center}
+scratch.mit.edu/statistics
+\end{center}
+\end{frame}
 
+%--------------------------------------------------------
+%\usebackgroundtemplate{\includegraphics[width=18cm]{figs/stats.png}}
 
-  \begin{columns}[T]
+\begin{frame}
+\frametitle{¿Por qué una herramienta como Dr. Scratch?}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=5cm, height=6cm]{figs/cara.png}
+\end{center}
+\label{fig:naming}
+\end{figure}
+\begin{center}
+Disfrutando de corregir proyectos Scratch
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------
+%\usebackgroundtemplate{\includegraphics[width=18cm]{figs/stats.png}}
+
+\begin{frame}
+\frametitle{Revisión de la literatura}
+\begin{columns}[T]
     \begin{column}{1\textwidth}
-     \begin{block}{Learning to code with Scratch}
+     \begin{block}{Evaluación de proyectos Scratch}
 \begin{itemize}
-  \item Scratch has shown to be successfull in teaching basic and advanced programming concepts
-  \item However, bad programming habits have been detected
-  \item There are no automatic tools to check for \textit{correctness}
-  \item \texttt{Hairball}: \texttt{lint}-inspired static analysis of Scratch projects
+  \item Varios marcos para realizar análisis manuales.
+  \item \texttt{Scrape}: Analizador del portfolio de un usuario para visualizar los bloques utilizados.
+  \item \texttt{Hairball}: Analizador estático de proyectos Scratch inspirado en \texttt{lint} para detectar errores de programación.
 \end{itemize}
     \end{block}
     \end{column}
-    
   \end{columns}
-
 \end{frame}
-
-\usebackgroundtemplate{}
 
 %--------------------------------------------------------
 \begin{frame}
-\frametitle{Bad programming habits with Scratch (I)}
+\frametitle{Malos hábitos de programación con Scratch (I)}
 
 \begin{figure}[t!]
 \begin{center}
@@ -155,18 +164,18 @@ Who should/could be interested in this talk?
 \end{figure}
 
 \begin{center}
-\emph{Bad}/default naming of sprites
+Nombres de personajes \emph{incorrectos}/por defecto
 \end{center}
 \end{frame}
 
 %--------------------------------------------------------
 \begin{frame}
-\frametitle{Bad programming habits in Scratch (and II)}
+\frametitle{Malos hábitos de programación con Scratch (y II)}
 
   \begin{columns}[T]
     \begin{column}{0.5\textwidth}
  
-     \begin{block}{Example of repeated code}
+     \begin{block}{Ejemplo de código repetido}
 \begin{figure}[t!]
 \begin{center}
 \includegraphics[width=5.4cm,height=2.5cm]{figs/CodeRepetition1.png}
@@ -176,12 +185,12 @@ Who should/could be interested in this talk?
      \end{block}
     \end{column}
     \begin{column}{0.5\textwidth}
-     \begin{block}{Solution to avoid repeated code}
+     \begin{block}{Evitar la repetición de código}
 \begin{figure}[t!]
 \begin{center}
 \includegraphics[width=5.4cm,height=2.5cm]{figs/CodeRepetition2.png}
 \end{center}
-Blocks should be created to avoid repetition of code
+Deben definirse bloques para evitar la repetición de código
 \label{fig:repetition2}
 \end{figure}
      \end{block}
@@ -196,11 +205,11 @@ Blocks should be created to avoid repetition of code
 \usebackgroundtemplate{\includegraphics[width=13cm,height=9.2cm]{figs/plugins.png}}
 % background: http://25.media.tumblr.com/b83aa72682992ab34b8ce7e61c0cb7f9/tumblr_menxc7qcq61ryin08o1_r1_1280.jpg
 \begin{frame}
-\frametitle{Hairball plug-ins development}
+\frametitle{Desarrollo de plug-ins para \texttt{Hairball}}
 
   \begin{columns}[T]
     \begin{column}{0.8\textwidth}
-     \begin{block}{\vspace{0.1cm}\center{We have developed two plug-ins for Hairball to automatically detect bad programming habits}\vspace{0.1cm}}
+     \begin{block}{\vspace{0.1cm}\center{Desarrollamos dos plug-ins para \texttt{Hairball} para detectar automáticamente estos malos hábitos de programación}\vspace{0.1cm}}
 \vspace{0.3cm}
 \begin{enumerate}
   \item convention.SpriteNaming
@@ -221,24 +230,74 @@ Blocks should be created to avoid repetition of code
 % background: http://www.wim-network.org/wp-content/uploads/2012/04/iceberg.jpg
 
 \begin{frame}
-\frametitle{Scratch projects repository analysis}
+\frametitle{Análisis del repositorio de proyectos Scratch}
 
 \begin{table}
 \begin{center}
   \begin{tabular}{ | l | c | c | c |}
    \hline
-              & Default names & Duplicated scripts & Defined blocks \\ \hline\hline
-    Projects & 79 & 62 & 17 \\ \hline
-    Mean & 5.94 & 7.23 & 1.11 \\ \hline
-    Median & 3 & 2 & 0 \\ \hline
-    Maximum & 67 & 71 & 25 \\
+              & Nombres por def. & Prog. Duplicados & Bloques propios \\ \hline\hline
+    Proyectos & 79 & 62 & 17 \\ \hline
+    Media & 5.94 & 7.23 & 1.11 \\ \hline
+    Mediana & 3 & 2 & 0 \\ \hline
+    Máximo & 67 & 71 & 25 \\
     \hline    
   \end{tabular}
 \end{center}
-\caption{Analysis of 100 ramdonly downloaded Scratch projects}
+\caption{Análisis de 100 proyectos Scratch descargados aleatoriamente}
 \label{table:results}
 \end{table}
 \end{frame}
+
+%--------------------------------------------------------
+\usebackgroundtemplate{\includegraphics[width=13cm, height=9cm]{figs/drscratch.png}}
+% background: http://www.wim-network.org/wp-content/uploads/2012/04/iceberg.jpg
+
+\begin{frame}
+\frametitle{Dr. Scratch}
+
+\end{frame}
+
+\usebackgroundtemplate{}
+
+%--------------------------------------------------------
+%\usebackgroundtemplate{\includegraphics[width=13cm]{figs/iceberg.jpg}}
+% background: http://www.wim-network.org/wp-content/uploads/2012/04/iceberg.jpg
+
+\begin{frame}
+\frametitle{Dr. Scratch: análisis del Pensamiento Computacional}
+\begin{table}[t]\tiny 
+\centering
+%\begin{tabular}{p{2.5cm}p{2.7cm}p{3cm}p{4cm}}
+\begin{tabular}{|l|p{2cm}|p{2cm}|p{2cm}|}
+%\toprule
+\hline
+Componente PC & Básico & En desarrollo & Avanzado\\ %\midrule 
+\hline
+\hline  
+Representación de la información & modifiers of sprites properties &
+operations on vars & operations on lists  \\
+\hline
+Pensamiento Lógivo & if & if else & logic operations \\ 
+\hline
+Interactividad con el usuario & green flag & key pressed, sprite clicked, ask and wait,
+mouse blocks & when \%s is \textgreater \%s, video, audio \\ 
+\hline
+Control de flujo & sequence of blocks & repeat, forever & repeat until \\ 
+\hline
+Abstracción & more than one script and more than one sprite & def block & when I start as clone\\
+\hline
+Paralelismo & Two scripts on green flag & Two scripts on key pressed, two scripts on sprite clicked on the same sprite & Two scripts on when I receive message, create clone, two scripts when \%s is \textgreater \%s, two scripts on when backdrop change to \\
+\hline
+Sincronización & wait & Broadcast, when I receive message, stop all, stop program, stop programs sprite & wait until, when backdrop change to, broadcast and wait \\ 
+\hline
+\end{tabular}
+\caption{Nivel de desarrollo para cada componente del Pensamiento Computacional.}
+\label{table:CTscore}
+\end{table}
+
+\end{frame}
+
 
 %--------------------------------------------------------
 %\usebackgroundtemplate{\includegraphics[width=13cm]{figs/take-away.jpg}}
