@@ -111,7 +111,7 @@ For those images, \emph{fair use} applies.
 \begin{center}
 \includegraphics[width=10cm, height=6cm]{figs/stats.png}
 \end{center}
-\label{fig:naming}
+\label{fig:stats}
 \end{figure}
 \begin{center}
 scratch.mit.edu/statistics
@@ -122,12 +122,27 @@ scratch.mit.edu/statistics
 %\usebackgroundtemplate{\includegraphics[width=18cm]{figs/stats.png}}
 
 \begin{frame}
-\frametitle{¿Por qué una herramienta como Dr. Scratch?}
+\frametitle{¿Por qué una herramienta como Dr. Scratch? (I)}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=10cm, height=6cm]{figs/pylint.png}
+\end{center}
+\label{fig:pylint}
+\end{figure}
+\begin{center}
+Analizando un programa Python con Pylint
+\end{center}
+\end{frame}
+%--------------------------------------------------------
+%\usebackgroundtemplate{\includegraphics[width=18cm]{figs/stats.png}}
+
+\begin{frame}
+\frametitle{¿Por qué una herramienta como Dr. Scratch? (y II)}
 \begin{figure}[t!]
 \begin{center}
 \includegraphics[width=5cm, height=6cm]{figs/cara.png}
 \end{center}
-\label{fig:naming}
+\label{fig:corrigiendo}
 \end{figure}
 \begin{center}
 Disfrutando de corregir proyectos Scratch
@@ -304,7 +319,7 @@ Sincronización & wait & Broadcast, when I receive message, stop all, stop progra
 \begin{center}
 \includegraphics[width=11cm, height=5cm]{figs/logica.png}
 \end{center}
-\label{fig:naming}
+\label{fig:logic}
 \end{figure}
 \begin{center}
 Midiendo el desarrollo del Pensamiento Lógico
@@ -386,7 +401,7 @@ Midiendo el desarrollo del Pensamiento Lógico
 %--------------------------------------------------------
 %\usebackgroundtemplate{\includegraphics[width=13cm]{figs/take-away.jpg}}
 % background: http://2.bp.blogspot.com/-78Eh4TBpdtU/UPw7ULV73PI/AAAAAAAAHAE/6DQfvPNCo-Y/s1600/8723052-stylized-red-stamp-showing-the-term-take-away-all-on-white-background.jpg
-\usebackgroundtemplate{\includegraphics[width=13cm, height=10cm]{figs/thanks.jpg}}
+\usebackgroundtemplate{\includegraphics[width=13cm, height=9cm]{figs/thanks.jpg}}
 
 \begin{frame}
 \frametitle{Agradecimientos}
@@ -394,12 +409,12 @@ Midiendo el desarrollo del Pensamiento Lógico
 \begin{columns}[T]
     \begin{column}{0.8\textwidth}
      \begin{block}{¡Muchas gracias!}
-\begin{enumerate}
+\begin{itemize}
   \item FECYT.
   \item Google.
   \item Microsoft.
   \item MariLuz, Eva y Cristian.
-\end{enumerate}
+\end{itemize}
     \end{block}
     \end{column}
   \end{columns}\vspace{\baselineskip}
