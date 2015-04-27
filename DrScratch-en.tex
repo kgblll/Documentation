@@ -28,8 +28,9 @@
 \renewcommand{\appendixname}{Apéndice}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-				% PORTADA %
+				% FRONTMATTER %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
 \begin{titlepage}
 \begin{center}
 
@@ -87,15 +88,15 @@ DR.SCRATCH'S DOCUMENTATION
 %\listoftables % Index of tables
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		      % INTRODUCTION %
+		      % MAINMATTER %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
 \cleardoublepage
 \pagenumbering{arabic} % Arabic numerals
 \chapter{Getting started with Dr.Scratch}
 \label{sec:beginning} % to refer in the text ~\ref{sec:introduction}
 \section{The beginning} 
 \setlength{\parskip}{8mm}
-
 \textsl{'
 Dr.Scratch is a web application to analyze your own (or their students) Scratch
 projects. Feedback is given in a variety of areas Computational Thinking. That
@@ -106,16 +107,14 @@ To begin with, we want to show the evolution of Dr.Scratch and how it works
 without going into technical details. The reason of this is we would like have
 a view of our errors at the beginning and how we did solve thank to the
 feedback of our users.
-
 Dr.Scratch begins as a simple idea, correct bad habits that many students can
 acquire programming. Is being introduced the Scratch environment as a tool to
 teach programming skills or develop computational thinking is increasingly
 common in all levels of education and Dr.Scratch tries to help in this mission.
- 
 At first, we thought about the Scratch projects which you can download from
 Scratch web how the Figure~\ref{figure:download} shows. It allows you to have your project in your own computer and upload it to
 Dr.Scratch to be analyzing. 
- 
+
 \begin{figure}
     \centering
     \includegraphics[scale=0.7]{img/download.png}
@@ -133,16 +132,13 @@ can take a look at the Figure~\ref{figure:first-appearance} shows.
    	\caption{First Appearance of Dr.Scratch.}
    	\label{figure:first-appearance}
 \end{figure}
- 
+
 You could choose a file (previously downloaded from Scratch), click
 `` Send '' to analyze and find code smells with the information 
 provided on the dashboard that Dr.Scratch showed  after a few seconds.
-   
-
 Also you had got extra information:
-\setlength{\parskip}{2mm}
-\begin{itemize}
 
+\begin{itemize}
    	\item A demo video explaining how to use Dr.Scratch to improve your 
    	programming skills.
    	\item A contact section where you could find our e-mail and twitter to write
@@ -150,7 +146,7 @@ Also you had got extra information:
 	\item The new features that we wanted to develop in that moment.
 	\item The posibility to sign in on the top.
 \end{itemize}
-\setlength{\parskip}{8mm}
+
 When you clicked on ``Send'' Dr.Scratch uploaded your project to our server
 without to save any additional information. After that, we used and
 still use some plug-ins (which will be described later) to analyze the 
@@ -159,9 +155,8 @@ Figure~\ref{figure:first-dashboard}.
 
 The dashboard gives you information in detail about several aspects which are
 related to Computational Thinking like: 
-\setlength{\parskip}{0mm}
+
 \begin{itemize}
-  	\setlength{\parskip}{0mm}
    	\item Logic
    	\item Abstraction
 	\item Parallelization
@@ -178,22 +173,19 @@ related to Computational Thinking like:
    	\label{figure:first-dashboard}
 \end{figure}
 
+
 In accordance with these aspects, your project will have a score that is showed
 in the top with the title ``CT Score'' and gives you a idea about your level.
-
 The other information provided tells about those habits which some programmers
 can acquire when starts in this world. We have started with four of these bad
 habits:
-\setlength{\parskip}{0mm}
+
 \begin{enumerate}
-  	\setlength{\parskip}{0mm}
    	\item Duplicated scripts
    	\item Sprite naming
 	\item Dead code
 	\item Sprite attributes initialization
 \end{enumerate}
-
-
 This appearance was in production since November of 2014 until March of 
 2015. Although it was very simple, had high acceptance. We reckon this was 
 the reason of his successful. But we have a long way to go, in fact, we are
@@ -201,8 +193,138 @@ including new features and appearances trying to get close to the final product.
 These new features and appearances will be described in the following section
 explaining why we thought it was a good idea add it.
 
-
 \section{Always improving}
+\textsl{'
+At that moment, Dr.Scratch is a beta version and we're incluiding new
+features.'}
+
+The first feature we wanted to include was the analyzing by the url provided
+by Scratch because it was demanded us by many users. They didn't want to have to
+donwload their projects in their own computers and later use Dr.Scratch. At the
+same time, we decided to change de appearance of the main page trying to catch
+the atention of more amount of users. Then using bootstrap we did the web which
+you can see in the Figure~\ref{figure:second-appearance-drScratch}.
+
+
+\begin{figure}
+   	\centering
+   	\includegraphics[scale=0.4]{img/second-appearance-drScratch.png}
+   	\caption{Second Appearance of Dr.Scratch.}
+   	\label{figure:second-appearance-drScratch}
+\end{figure}
+
+We chose this appearance because it shows the soul of Dr.Scratch: many people
+are working and learning together, sharing their work to get better projects.
+
+There is a summary for introduce Dr.Scratch to new users and the two ways to
+analyze your Scratch projects.
+
+This web has several sections where you can read information about Dr.Scratch:
+
+\begin{enumerate}
+   	\item Why?
+   	\begin{figure}
+	   	\centering
+	   	\includegraphics[scale=0.4]{img/second-appearance-why.png}
+	   	\caption{Section 'Why?' of Dr.Scratch's web.}
+	   	\label{figure:second-appearance-why}
+	\end{figure}
+   
+   	\item Who?
+   	\begin{figure}
+	   	\centering
+	   	\includegraphics[scale=0.4]{img/second-appearance-how.png}
+	   	\caption{Section 'How?' of Dr.Scratch's web.}
+	   	\label{figure:second-appearance-how}
+	\end{figure}
+	\item Working on
+	\begin{figure}
+	   	\centering
+	   	\includegraphics[scale=0.3]{img/second-appearance-workingon.png}
+	   	\caption{Section 'Working on' of Dr.Scratch's web.}
+	   	\label{figure:second-appearance-workingon}
+	\end{figure}
+	\item Contact us
+	\begin{figure}
+	   	\centering
+	   	\includegraphics[scale=0.3]{img/second-appearance-contactus.png}
+	   	\caption{Section 'Contact us' of Dr.Scratch's web.}
+	   	\label{figure:second-appearance-contactus}
+	\end{figure}
+\end{enumerate}
+
+You can select a section from the top navigation bar to read more. When you
+click on them you could see the following views that are showing in the
+Figures:~\ref{figure:second-appearance-why},
+~\ref{figure:second-appearance-how}, 
+~\ref{figure:second-appearance-workingon} and 
+~\ref{figure:second-appearance-contactus}
+
+Nowadays we're working on three new dashboards where you could see the
+information acording your level of Computational Thinking.
+
+\cleardoublepage
+\chapter{How Dr.Scratch was implemented?}
+\setlength{\parskip}{8mm}
+\textsl{'Dr.Scratch powered thanks to several modules interconected each
+other.'}
+
+Como la mayoria de las aplicaciones, Dr.Scratch es un conjunto de modulos
+interconectados entre si. Pero podemos simplificarlos en tres principalmente:
+\begin{itemize}
+\setlength{\parskip}{4mm}
+	\item  Hairball: plug-in encargado de analizar los projectos de Scratch que son
+	subidos a Dr.Scratch y es el modulo que se encarga de decidir las notas de
+	dichos proyectos en una variedad amplia de aspectos referentes al pensamiento
+	computacional.
+	\item  Django: framework de programacion para generacion servidores con Python,
+	donde esta el nucleo de nuestra web. 
+	\item Bootstrap: framework de css que nos permite mostrar la web con un aspecto
+	muy profesional. Se encarga de organizar y dar prioridad a los distintos
+	ficheros css, JavaScript, fonts\ldots de los que consta nuesta aplicacion.
+\end{itemize}
+
+En las siguientes secciones los vamos a ver en mayor detalle, indicando donde
+hemos tenido mayores dificultades y la forma de resolverlas.
+
+\section{Hairball}
+
+\section{Django}
+\subsection{Urls}
+\subsection{Views}
+\subsection{Models}
+\subsection{Internationalization}
+
+\cleardoublepage
+\chapter{Dr.Scratch in production}
+\section[Apache]{Apache and mod\_wsgi to Django}
+
+You must to have an server over your aplication to do this multithread. We chose
+Apache as our license because is easy to implemente with Django throw a module
+called mod\_wsgi.
+
+We aren't using Virtualenv because all of us use the same version then we don't
+need this.
+
+The steps followed to install Apache with mod\_wsgi to Django were:
+\begin{enumerate}
+   	\item You can download
+   	Apache from: http://httpd.apache.org/docs/2.0/es/install.html
+	\item Install it following the steps indicated in the web.
+	\item Install mod\_wsgi.
+	\item Configure Apache changing the file httpd.conf
+\end{enumerate}
+
+Some tricks:
+\begin{itemize}
+   	\item 
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		      % CONCLUSION %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
 
 
 
