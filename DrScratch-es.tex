@@ -1,0 +1,442 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Plantilla de memoria en LaTeX para la ETSIT - Universidad Rey Juan Carlos
+%%
+%% Por Gregorio Robles <grex arroba gsyc.urjc.es>
+%%     Grupo de Sistemas y Comunicaciones
+%%     Escuela Técnica Superior de Ingenieros de Telecomunicación
+%%     Universidad Rey Juan Carlos
+%% (muchas ideas tomadas de Internet, colegas del GSyC, antiguos alumnos...
+%%  etc. Muchas gracias a todos)
+%%
+%% La última versión de esta plantilla está siempre disponible en:
+%%     https://github.com/gregoriorobles/plantilla-memoria
+%%
+%% Para obtener PDF, ejecuta en la shell:
+%%   make
+%% (las imágenes deben ir en PNG o JPG)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, 12pt]{book}
+%\usepackage[T1]{fontenc}
+
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
+\usepackage{times}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel} % Comenta esta línea si tu memoria es en inglés
+\usepackage{url}
+%\usepackage[dvipdfm]{graphicx}
+\usepackage{graphicx}
+\usepackage{float}  %% H para posicionar figuras
+\usepackage[nottoc, notlot, notlof, notindex]{tocbibind} %% Opciones de índice
+\usepackage{latexsym}  %% Logo LaTeX
+
+\title{Dr.Scratch's Documentación}
+\author{Mari Luz Aguado}
+
+\renewcommand{\baselinestretch}{1.5}  %% Interlineado
+
+\begin{document}
+
+\renewcommand{\refname}{Bibliografía}  %% Renombrando
+\renewcommand{\appendixname}{Apéndice}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+				% PORTADA %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\begin{center}
+
+\begin{tabular}[c]{c c}
+\vspace{2cm}
+\end{tabular}
+
+
+
+\begin{tabular}[c]{c c}
+\Huge
+DOCUMENTACIÓN DE DR.SCRATCH
+\end{tabular}
+
+\vspace{6cm}
+
+\includegraphics[scale=0.7]{img/logoURJC.jpg}
+\begin{tabular}[b]{l}
+\includegraphics[scale=0.7]{img/logoProgramamos.png} 
+\end{tabular}
+\\
+\includegraphics[scale=0.5]{img/logoLibresoft.jpg}
+\begin{tabular}[b]{l}
+\includegraphics[scale=0.5]{img/logoFECYT.png} 
+\end{tabular}
+
+
+\vspace{2.5cm}
+
+\vspace{4cm}
+
+\large
+2014/2015
+\end{center}
+\end{titlepage}
+
+\newpage
+\mbox{}
+\thispagestyle{empty} % para que no se muestre nada en esta página
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Dedicatoria
+
+\chapter*{}
+\pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
+\begin{flushright}
+\textit{Nuestra pasión es nuestra fortaleza.}
+\end{flushright}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Resumen
+
+\chapter*{Resumen}
+\setlength{\parskip}{8mm}
+%\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
+\markboth{RESUMEN}{RESUMEN} % encabezado
+
+Dr.Scratch es una aplicación para analizar tus proyectos de Scratch y la cual 
+te suministra información de una amplia variedad de aspectos del 
+Pensamiento Computacional. Ayuda a conocer cuáles son los errores más comunes
+en programadores principiantes, de un modo sencillo y divertido. 
+
+Su principal objetivo es ayudar a programadores en sus primeros pasos, 
+indicando qué capacidades es necesario que mejoren. Además de evitar malos
+hábitos que han sido observados por docentes en sus propios alumnos.
+
+Además de tratar de incluir aspectos de redes sociales que permitan a los
+usuarios compartir sus experiencias y aprender conjuntamente con el apoyo de 
+elementos de gamificación que intentan motivar a los más pequeños a interesarse
+por el mundo de la programación.
+
+El equipo de Dr.Scratch ha ido evolucionando junto con el proyecto y se han 
+ido tomando decisiones conforme se han encontrando problemas o por la sugerencia
+de los usuarios. Esto no quiere decir que no se tuviera una versión alpha
+previa, pero las demandas del mercado han provocado significativas 
+modificaciones. De hecho, la base de crear un servidor en Django con Python se
+ha mantenido a lo largo de todo el proyecto. 
+
+En este documento se trata de plasmar esta evolución de la aplicación web, 
+los problemas más significativos que nos hemos ido encontrando y la forma
+en la que los hemos resuelto.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ÍNDICES %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Las buenas noticias es que los índices se generan automáticamente.
+% Lo único que tienes que hacer es elegir cuáles quieren que se generen,
+% y comentar/descomentar esa instrucción de LaTeX.
+\setlength{\parskip}{2mm}
+%%%% Índice de contenidos
+\tableofcontents 
+%%%% Índice de figuras
+\cleardoublepage
+%\addcontentsline{toc}{chapter}{Lista de figuras} % para que aparezca en el indice de contenidos
+\listoffigures % indice de figuras
+%%%% Índice de tablas
+%\cleardoublepage
+%\addcontentsline{toc}{chapter}{Lista de tablas} % para que aparezca en el indice de contenidos
+%\listoftables % indice de tablas
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CAPÍTULO 1: EVOLUCIÓN DE DR.SCRATCH %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\setlength{\parskip}{4mm}
+\chapter{Evolución de Dr.Scratch}
+\label{sec:intro} % etiqueta para poder referenciar luego en el texto con ~\ref{sec:intro}
+\section{Primera versión: Alfa} 
+
+\pagenumbering{arabic} % para empezar la numeración de página con números
+\setlength{\parskip}{8mm}
+
+\textsl{'
+Dr.Scratch es una aplicación web donde puedes analizar tus proyectos de Scratch
+(o los de tus estudiantes). Proporciona información en una amplia variedad
+de áreas del Pensamiento Computacional. De esta forma, tu o tus estudiantes 
+podéis ser capaces de aprender y mejorar las habilidades de programación
+ más importantes.
+'}
+
+Para empezar, queremos mostrar la evolución de Dr.Scratch y cómo funciona sin 
+la necesidad de entrar en detalles técnicos. La razón de esto es que nos 
+gustaría tener una visión general de nuestros errores al empezar con el 
+desarrollo y cómo los hemos resuelto gracias a la retroalimentación obtenida 
+con la ayuda de nuestros usuarios y diversos talleres realizados.
+
+Dr.Scratch comenzó con una idea básica, corregir los malos hábitos que muchos 
+estudiantes pueden adquirir programando. Se está introduciendo el entorno de 
+Scratch como herramienta para enseñar habilidades de programación y además se
+puede observar que el desarrollo del pensamiento computacional es común en todos
+los niveles de educación y Dr.Scratch trata de ayudar en esa misión.
+
+En un principio, pensamos utilizar para realizar el análisis los proyectos de 
+Scratch que puedes descargar de la página web de Scratch tal como te muestra 
+la Figura~\ref{figure:descarga}. Lo que te permite tener tus proyectos en tu 
+propio ordenador y subirlo a Dr.Scratch para ser analizados.
+
+ 
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{img/descarga.png}
+    \caption{Descarga un proyecto de Scratch a tu propio ordenador.}
+    \label{figure:descarga}
+\end{figure}
+
+La primera apariencia que diseñamos para la web fue muy simple, queríamos 
+usar la opición descrita además de implementar la funcionalidad de subida 
+de ficheros a nuestro servidor y el análisis de los proyectos. Puedes verla en 
+la Figura~\ref{figure:first-appearance}. Señalar que en la versión Alfa,
+todas las páginas mostradas por la web únicamente fueron implementadas en idioma 
+Inglés pero en versiones posteriores se traduciría al Español(Castellano), 
+además con la intención de traducirlo a más lenguas.
+
+
+ \begin{figure}
+   	\centering
+   	\includegraphics[scale=0.7]{img/first-appearance.png}
+   	\caption{Primera apariencia de Dr.Scratch.}
+   	\label{figure:first-appearance}
+\end{figure}
+
+
+Como ves, podías elegir un fichero (previamente descargado de Scratch), 
+pinchar ``Send'' para analizarlo y encontrar información de malos hábitos de 
+programación detallada en el resumen que Dr.Scratch muestra tras algunos 
+segundos.
+
+
+
+También podías observar más información y que se detalla a continuación:
+\setlength{\parskip}{2mm}
+\begin{itemize}
+
+   	\item Un video demostrativo de cómo utilizar Dr.Scratch para mejorar tus 
+    habilidades de programación.
+   	\item Una sección de contacto donde podías encontrar nuestro e-mail y 
+    twitter para escribirnos si tenías alguna petición o sugerencia.
+	\item Las nuevas características que queríamos desarrollar en ese momento.
+	\item La posibilidad de registro en la parte superior.
+\end{itemize}
+\setlength{\parskip}{8mm}
+Cuando pinchabas en ``Send'' Dr.Scratch subía tu proyecto a nuestro servidor sin
+guardar ningún otro tipo de información adicional. Después, utilizamos algunos
+plug-ins (que serán descritos más adelante) para analizar el proyecto y mostrar
+el resumen que puedes ver en la Figura~\ref{figure:first-dashboard}.
+
+El resumen aporta información en detalle sobre varios aspectos que están 
+relacionados con el Pensamiento Computacional y son los siguientes: 
+\setlength{\parskip}{0mm}
+\begin{itemize}
+  	\setlength{\parskip}{0mm}
+   	\item Pensamiento lógico
+   	\item Abstracción
+	\item Paralelismo
+	\item Sincronización
+	\item Control de flujo
+	\item Interactividad con el usuario
+	\item Representación de la información
+\end{itemize}
+
+\begin{figure}
+   	\centering
+   	\includegraphics[scale=0.3]{img/first-dashboard.png}
+   	\caption{Primer cuadro resumen de Dr.Scratch.}
+   	\label{figure:first-dashboard}
+\end{figure}
+
+Según tu soltura en estas habilidades, tu proyecto tendrá una puntuación que es 
+mostrada en la parte superior con el título ``CT Score'' y te da una idea de 
+cuál es tu nivel.
+
+La otra información que puedes conocer es sobre esos hábitos que algunos 
+programadores pueden adquirir cuando empiezan en este mundo. Empezamos 
+incluyendo cuatro de esos malos hábitos:
+\setlength{\parskip}{0mm}
+\begin{enumerate}
+  	\setlength{\parskip}{0mm}
+   	\item Programas duplicados
+   	\item Nombres no personalizados
+	\item Código muerto
+	\item Atributos no inicializados correctamente
+\end{enumerate}
+
+
+Esta apariencia estuvo en producción desde noviembre de 2014 hasta marzo de 
+2015. Aun que es muy simple, tuvo una gran acogida. Creemos que precisamente 
+esta es la razón de su éxito. Pero teníamos aún un largo camino que hacer, 
+de hecho, nosotros estamos ahora incluyendo nuevas características y apariencias
+ tratando de acercarnos al producto final. Esas nuevas características y 
+apariencias serán descritas en la siguiente sección explicando por qué fue una 
+buena idea añadirlas. 
+
+
+
+
+\section{Segunda versión: Beta}
+
+\setlength{\parskip}{8mm}
+\textsl{'
+Dr.Scratch intenta siempre adaptarse a las necesidades que nuestros usuarios
+nos comunican además de tratar de implementar un espacio limpio, agradable y 
+divertido.
+'}
+
+Y siguiendo esta premisa, una vez logramos implementar la funcionalidad principal de Dr.Scratch nos pusimos manos a la obra para tratar de mostrar la web de un modo más atractivo y obtuvimos el resultado mostrado en la Figura~\ref{figure:segunda-apariencia}. Como puedes observar, esta web ya podía verse en Castellano debido al trabajo en paralelo, pero los problemas y pasos seguidos para la traducción se comentarán en el Capítulo XXXXXX.
+
+\begin{figure}
+   	\centering
+   	\includegraphics[scale=0.4]{img/segunda-apariencia.png}
+   	\caption{Segunda apariencia de Dr.Scratch.}
+   	\label{figure:segunda-apariencia}
+\end{figure}
+
+Además señalar que como puede verse además del análisis tradicional a través de 
+la subida del proyecto de Scratch, introdujimos la opción de poder realizar el 
+análisis mediante la url suministrada por Scratch que todo proyecto tiene, 
+un ejemplo es: 
+\setlength{\parskip}{4mm}
+\begin{flushleft}
+\centering
+https://scratch.mit.edu/projects/51946620/
+\end{flushleft}
+
+\setlength{\parskip}{8mm}
+En la parte inferior se puede observar las distintas organizaciones que estan 
+colaborando en el proyecto. 
+
+Añadir que en esta nueva apariencia quisimos ser más cercanos añadiendo cuatro
+ nuevos puntos que se muestran en el menú principal:
+
+\setlength{\parskip}{0mm}
+\begin{enumerate}
+  	\setlength{\parskip}{0mm}
+
+   	\item {\bfseries ¿Por qué?}
+        Explicamos brevemente cuáles son los puntos fuertes de Dr.Scratch y 
+        porque podría ser de utilidad para el usuario.Puedes verla en la 
+        Figura~\ref{figure:porque}.
+
+    \begin{figure}
+       	\centering
+       	\includegraphics[scale=0.35]{img/porque.png}
+       	\caption{¿Por qué te encantará Dr.Scratch?}
+       	\label{figure:porque}
+    \end{figure}
+
+   	\item {\bfseries ¿Cómo?}
+        Mostramos mediante un vídeo y algo de texto cómo pueden empezar a probar 
+        Dr.Scratch analizando de dos modos diferentes sus proyectos de Scratch.
+        La Figura~\ref{figure:como} te muestra esta sección.
+
+    \begin{figure}
+       	\centering
+       	\includegraphics[scale=0.35]{img/como.png}
+       	\caption{¿Cómo funciona Dr.Scratch?}
+        \label{figure:como}
+    \end{figure}
+
+	\item {\bfseries Próximamente}
+        Indicamos cuáles son las nuevas características que tenemos pensado 
+        incluir en la plataforma mostrando nuestro deseo de querer recibir 
+        consejos, sugerencias y peticiones. Estas nuevas funcionalidades eran
+        las que puedes ver en la Figura~\ref{figure:nuevasfuncionalidades}.
+
+    \begin{figure}
+       	\centering
+       	\includegraphics[scale=0.35]{img/nuevasfuncionalidades.png}
+       	\caption{Nuevas funcionalidades de Dr.Scratch.}
+        \label{figure:nuevasfuncionalidades}
+    \end{figure}
+
+	\item {\bfseries Contacto}
+        Esta sección incluye todas las vías que tiene el usuario de ponerse en 
+        contacto con nosotros ya que nos parece indispensable tener información 
+        de nuestros usuarios para poder hacer una herramienta que realmente sea 
+        útil. Dicha información es mostrada por la 
+        Figura~\ref{figure:contacto}.
+
+    
+    \begin{figure}
+       	\centering
+       	\includegraphics[scale=0.35]{img/contacto.png}
+       	\caption{Contacta con el equipo de Dr.Scratch.}
+        \label{figure:contacto}
+    \end{figure}
+
+\end{enumerate}
+
+
+La idea de incluir también el análisis por url surgió de la petición realizada 
+por varios usuarios de Dr.Scratch que mostraron la dificultad que tenían algunos
+ de sus alumnos para descargarse el proyecto. Además, nos aconsejaron que 
+tratáramos de simplificar de algún modo el cuadro de resumen con las 
+puntuaciones porque consideraban que eran demasiado complicados para algunos 
+alumnos.
+
+Así el equipo de Dr.Scratch consideró oportuno probar a mostrar un resumen de 
+la información diferente en función del nivel obtenido de Pensamiento 
+Computacional, donde si el nivel obtenido era básico se mostraría muchísima 
+menos información que si el nivel obtenido era alto, siendo el nivel medio algo 
+intermedio. Aunque se siguió manteniendo en producción el resumen mostrado en 
+la versión Alfa, se diseñaron los tres cuadros de resumen de la información  
+siguiendo este criterio en la máquina de preproducción para ver cuál era su 
+aceptación en dos talleres que fueron realizados, uno con docentes y otro con 
+niños de 5º de primaria.
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APÉNDICE(S) %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\appendix
+\chapter{Manual de usuario}
+\label{app:manual}
+\renewcommand{\baselinestretch}{1.5}  %% Interlineado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAFIA %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+
+% Las siguientes dos instrucciones es todo lo que necesitas
+% para incluir las citas en la memoria
+\bibliographystyle{abbrv}
+\bibliography{memoria}  % memoria.bib es el nombre del fichero que contiene
+% las referencias bibliográficas. Abre ese fichero y mira el formato que tiene,
+% que se conoce como BibTeX. Hay muchos sitios que exportan referencias en
+% formato BibTeX. Prueba a buscar en http://scholar.google.com por referencias
+% y verás que lo puedes hacer de manera sencilla.
+% Más información: 
+% http://texblog.org/2014/04/22/using-google-scholar-to-download-bibtex-citations/
+
+\end{document}
