@@ -1,0 +1,21 @@
+User interactivity
+
+The instructions related to user interactivity can help your Scratch projects become more interactive, that is, the person who is running the project will be able to perform actions that cause situations new. For example, it is possible to use the keyboard or the mouse to move a character, to answer questions or to interact with the computer webcam, among many other possibilities.
+
+[0 points]
+
+The most basic block with which you can start working user interactivity is "When green flag clicked"
+
+How does this block work? When the user who wants to run your Scratch project clicks on the green flag, all blocks placed under the block "when green flag clicked" will be executed. You can have as many programs as you need starting with this block.
+
+[1 points]
+
+Now that you've begun to interact with the user running your Scratch projects, you might try some of the following blocks:
+
+As you can see, it is possible to allow users to interact with your characters by pressing keys to move them, writing answers to questions so your characters can utilize the user's answers, move characters with the mouse, or perform actions when the user clicks on a specific sprite.
+
+[2 points]
+
+One of the funniest Scratch possibilities in terms of interactivity with the user is that users can utilize the webcam or the microphone to interact with the sprites by triggering certain actions.
+
+As you can see in the examples, we can make that certain sets of blocks are run when the ambient sound captured by the microphone is greater than a certain threshold, or when video motion occurs over an object or background. The possibilities of these blocks are huge and allow your Scratch creations be fully interactive with users.
