@@ -1,0 +1,45 @@
+Dead Code
+
+The dead code are parts of the programs that are never executed. How can dead code be formed? For example, when you have a program that does not begin with a Hat block, or when a program is waiting for a message that no other program ever sends.
+These situations are often the cause of projects that do not work as expected, so you should try to avoid dead code in your programs!
+
+Initializizing Attributes
+
+One of the most common mistakes when learning to program is not to initialize attributes of objects correctly. What are the attributes? These are sprites characteristics that can be modified along the execution of a project, such as its position, size, color, orientation...
+
+When you have blocks that modify an attribute of a character you should always have a program which, when starting to run the project, assigns the initial value that we want for that attribute. For instance, if the position of a character is modified, we should have a block "go to" under "When green flag clicked" to place the character in her starting position.
+
+
+Naming objects
+
+When starting to program with Scratch is quite usual to leave the name that Scratch assigns by default to the new characters (Sprite1, Sprite2...). When we have just a few characters, it is quite easy to know which character has each name; however, when the number of characters grows, things get complicated. Therefore, it is good practice to assign a meaningful name (one that is easily recognized) to every object of our projects, so our programs are more readable and we program them quicker. Avoid default names!
+
+Repetición de código
+
+Imagina que en un proyecto tenemos dos programas que se componen de los mismos bloques y en los que solo varían los parámetros o valores de los bloques.
+
+¿Qué ocurriría si quisiéramos hacer una pequeña modificación? Tendríamos que modificar ambos programas, lo que complica el mantenimiento del código. En estas situaciones es mucho más adecuado que el programador cree un bloque propio que defina este comportamiento y que utilice este nuevo bloque en todos los programas donde lo necesite.
+
+De este modo, si se quiere realizar una modificación, tan solo hay que ir al bloque definido por el programador.
+
+Code repetition
+
+Imagine that we have a project with two programs which are composed of the same blocks and where only vary the parameters or values of the blocks.
+
+What would happen if we wanted to make a small change? We would have to modify both programs, which complicates the maintenance of the code. In these situations it is much more appropriate for the programmer to create her own block that defines this behavior and use this new block in all programs where needed.
+
+Thus, if you need to make a change, we just have to modify the block defined by the programmer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
