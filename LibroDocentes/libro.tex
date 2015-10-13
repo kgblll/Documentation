@@ -1,5 +1,7 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,shadows}
 %opening
 \title{Guía docente: uso de Dr. Scratch para el desarrollo del pensamiento computacional}
 \author{Gregorio Robles, Jesús Moreno, María Luz Aguado, Eva Hu}
@@ -126,6 +128,30 @@ Veamos cómo funcionan con un ejemplo. Imagina que queremos simular que está ne
 \end{figure}
 
 De este modo, tan solo programando un personaje podemos tener infinitos clones, que se crean en un momento determinado de la ejecución del proyecto y se borran cuando ya no son necesarios.
+
+\newlength{\RoundedBoxWidth}
+\newsavebox{\GrayRoundedBox}
+\newenvironment{GrayBox}[1][\dimexpr\textwidth-4.5ex]%
+   {\setlength{\RoundedBoxWidth}{\dimexpr#1}
+    \begin{lrbox}{\GrayRoundedBox}
+       \begin{minipage}{\RoundedBoxWidth}}%
+   {   \end{minipage}
+    \end{lrbox}
+    \begin{center}
+    \begin{tikzpicture}%
+       \draw node[draw=black,fill=black!10,rounded corners,%
+             inner sep=2ex,text width=\RoundedBoxWidth]%
+             {\usebox{\GrayRoundedBox}};
+    \end{tikzpicture}
+    \end{center}}
+
+\begin{GrayBox}
+  \large\textbf{En resumen...}
+  
+  \normalsize{Aprender a abstraer ayuda a ver grandes problemas difíciles de resolver en pequeños problemas de fácil solución, favoreciendo, además, a que se desarrolle un proyecto de una forma más eficiente.}
+\end{GrayBox}
+
+
 \subsection{Nociones de algoritmia y control del flujo de los programas}
 \subsection{Pensamiento lógico}
 \subsection{Paralelismo}
