@@ -1,6 +1,6 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[utf8]{inputenc}
-
+\usepackage{graphics}
 %opening
 \title{Guía docente: uso de Dr. Scratch para el desarrollo del pensamiento computacional}
 \author{Gregorio Robles, Jesús Moreno, María Luz Aguado, Eva Hu}
@@ -67,6 +67,51 @@ La herramienta \texttt{Dr.}{\tiny{ }}\texttt{Scratch} permite, entre otras funci
 \section{Desarrollando los distintos aspectos del pensamiento computacional con Dr. Scratch}
 Para cada una de las dimensiones del pensamiento computacional que \texttt{Dr.}{\tiny{ }}\texttt{Scratch} evalúa, la herramienta asigna una puntuación entre 0 y 3 puntos, en función del grado de desarrollo demostrado en la programación del proyecto analizado. Para aquellas dimensiones en las que existe margen de mejora, \texttt{Dr.}{\tiny{ }}\texttt{Scratch} ofrece información para conocer nuevas posibilidades y seguir mejorando cada uno de estos aspectos.
 \subsection{Abstracción y descomposición de problemas}
+La capacidad de abstracción y descomposición de problemas te ayuda a dividir un problema en partes más pequeñas que serán más fáciles de comprender, programar y depurar.
+\subsubsection{Si has sacado 0 puntos...}
+Cuando se comienza a programar con Scratch, en ocasiones puede parecer que la solución más sencilla es programar todo el comportamiento de un personaje en un único programa. Sin embargo, lo ideal es que el comportamiento del personaje sea controlado por diferentes programas y que cada uno de estos programas se ocupe de una cuestión concreta. Veamos un ejemplo:
+
+
+\includegraphics[width=4cm]{img/abs1.jpg}
+
+Este proyecto, que pinta un dibujo en la pantalla, ha sido programado en un único programa que dibuja las dos líneas que componen el dibujo. Aunque es una opción válida, una opción más sencilla de programar y de mantener es dividir el programa en dos partes, de forma que tengamos dos programas diferentes, uno para pintar la primera línea y otro para pintar la segunda:
+
+
+\includegraphics[width=4cm]{img/abs2.jpg}
+
+
+
+De este modo, si queremos por ejemplo realizar alguna modificación en una de las líneas dibujadas, es mucho más sencillo saber a qué parte del programa tenemos que dirigirnos para llevar a cabo los cambios.
+\subsubsection{Si has sacado 1 punto...}
+Scratch permite crear nuevos bloques definidos por los usuarios que se componen de una secuencia de instrucciones. Estas abstracciones permiten crear programas más sencillos de leer, de programar y de mantener. Veamos un ejemplo: 
+
+
+\includegraphics[width=4cm]{img/abs3.jpg}
+
+
+Este proyecto Scratch dibuja dos líneas naranjas de diferente longitud en la pantalla. En lugar de repetir el código 2 veces, tal como vemos en el ejemplo, es posible definir un bloque “PintaNaranja” que se compone de los bloques que pintan una línea naranja en la pantalla y al que se le puede indicar cuál es la longitud de la línea. Para ello hay que irse a la categoría “Más Bloques” y pulsar en el botón Crear un bloque:
+
+
+\includegraphics[width=4cm]{img/abs4.jpg}
+
+
+Una vez definido el bloque “PintaNaranja” es posible utilizarlo en cualquier programa del proyecto, tal como vemos a continuación:
+
+
+\includegraphics[width=4cm]{img/abs5.jpg}
+
+
+De este modo, evitamos la repetición de código, lo que hace que nuestros proyectos sean más fáciles de programar y mantener. Tal como se puede observar, la primera vez que se usa el bloque PintaNaranja se le indica una longitud de 100 pasos, mientras que la segunda vez la longitud es de 200 pasos.
+\subsubsection{Si has sacado 2 puntos...}
+
+En algunos proyectos Scratch queremos tener muchos personajes iguales que realizan exacatamente las mismas acciones. La primera idea que se nos ocurre para conseguirlo es crear un personaje, programar todo su comportamiento y, una vez que está listo, crear tantas copias como necesitemos. Por tanto, si queremos 20 marcianitos, hay que crear 20 objetos iguales. Sin embargo, ¿qué ocurriría si quiero realizar un cambio en un programa? Tendría que ir objeto por objeto realizando esa modificación.
+
+Para este tipo de situaciones es preferible utilizar clones, un tipo de abstracción que nos ayuda a poder programar un solo objeto, y crear de forma dinámica copias exactas con el mismo comportamiento. 
+Veamos cómo funcionan con un ejemplo. Imagina que queremos simular que está nevando en un proyecto. Podemos dibujar un objeto que sea un copo de nive, y una vez que comience la ejecución del proyecto, ir creando clones constantemente que aparezcan en la parte superior de la pantalla y vayan cayendo hasta la parte inferior:
+
+\includegraphics[width=4cm]{img/abs6.jpg}
+
+De este modo, tan solo programando un personaje podemos tener infinitos clones, que se crean en un momento determinado de la ejecución del proyecto y se borran cuando ya no son necesarios.
 \subsection{Nociones de algoritmia y control del flujo de los programas}
 \subsection{Pensamiento lógico}
 \subsection{Paralelismo}
