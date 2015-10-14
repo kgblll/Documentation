@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\include{defs}
+
+\usepackage{lipsum}
+
+%%%%%%%%%%%%%%%
+% Title Page
+\title{G\'iua docente:  uso de Dr.  Scratch para el desarrollo del pensamiento computacional}
+\author{Gregorio Robles, Jes\'us Moreno, Mar\'ia Luz Aguado, Eva Hu}
+\date{\today}
+%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\clearpage
+
+\section{Introducci\'on}
+
+En los \'ultimos a\~nos estamos presenciando un movimiento global que defiende que el pensamiento computacional deber\'ia ser incluido en la formaci\'on de todos los ni\~nos y ni\~nas, ya que no solo representa un ingrediente vital del aprendizaje de la ciencia, la tecnolog\'ia, la ingenier\'ia y las matem\'aticas, sino que es una competencia fundamental para una vida plena en la sociedad digital hacia la que nos dirigimos.
+
+\subsection*{Pero, ¿qu\'e es el pensamiento computacional?}
+Jeannette Wing, en su art\'iculo \textit{Computational Thinking}\footnote{https://www.cs.cmu.edu/~CompThink/papers/Wing06.pdf} establece que el ``pensamiento computacional implica resolver problemas, dise\~nar sistemas y comprender el comportamiento humano, haciendo uso de los conceptos fundamentales de la inform\'atica''. Es decir, que la esencia del pensamiento computacional es pensar como lo har\'ia un inform\'atico cuando nos enfrentamos a un problema, de manera que podamos aprovechar la potencia de los ordenadores para resolverlos.
+
+Otras definiciones de pensamiento computacional han ido surgiendo en la literatura cient\'ifica desde entonces. Entre las m\'as aceptadas se encuentran la de Aho\footnote{http://comjnl.oxfordjournals.org/content/55/7/832.abstract} y la de la Royal Society\footnote{https://royalsociety.org/education/policy/computing-in-schools/report/}:
+\begin{itemize}
+ \item El pensamiento computacional es el proceso que permite formular problemas de forma que sus soluciones pueden ser representadas como secuencias de instrucciones y algoritmos.
+ \item El pensamiento computacional es el proceso de reconocimiento de aspectos de la inform\'atica en el mundo que nos rodea, y aplicar herramientas y t\'ecnicas de la inform\'atica para comprender y razonar sobre los sistemas y procesos tanto naturales como artificiales.
+\end{itemize}
+
+Una iniciativa muy interesante en relaci\'on a la definici\'on del pensamiento computacional es la promovida por la Sociedad Internacional de la Tecnolog\'ia en la Educaci\'on (ISTE) y la Asociaci\'on de Profesores de Inform\'atica (CSTA), que han colaborado con l\'ideres del mundo de la investigaci\'on y la educaci\'on superior, la industria y la educaci\'on primaria y secundaria para desarrollar una definici\'on operativa\footnote{http://csta.acm.org/Curriculum/sub/CurrFiles/CompThinkingFlyer.pdf} que describa con precisi\'on sus caracter\'isticas esenciales y ofrezca un marco de trabajo y un vocabulario com\'un con el que los profesionales de la educaci\'on puedan trabajar.
+
+Seg\'un esta definici\'on operativa, el pensamiento computacional es un proceso de resoluci\'on de problemas que incluye las siguientes caracter\'isticas:
+
+\begin{itemize}
+ \item Formular problemas de forma que se permita el uso de un ordenador y otras herramientas para ayudar a resolverlos.
+ \item Organizar y analizar l\'ogicamente la informaci\'on.
+ \item Representar la informaci\'on a trav\'es de abstracciones como los modelos y las simulaciones.
+ \item Automatizar soluciones haciendo uso del pensamiento algor\'itmico (estableciendo una serie de pasos ordenados para llegar a la soluci\'on).
+ \item Identificar, analizar e implementar posibles soluciones con el objetivo de lograr la combinaci\'on m\'as efectiva y eficiente de pasos y recursos.
+ \item Generalizar y transferir este proceso de resoluci\'on de problemas para ser capaz de resolver una gran variedad de familias de problemas.
+\end{itemize}
+
+\subsection*{Programaci\'on inform\'atica y pensamiento computacional}
+Aunque el pensamiento computacional puede trabajarse desde muchas disciplinas e incluso sin necesidad de contar con dispositivos electr\'onicos, diversas investigaciones demuestran que la programaci\'on inform\'atica es una muy buena herramienta para desarrollar esta competencia. (FIXME referencia)
+
+Por consiguiente, responsables educativos de todo el mundo han comenzado a incluir la programaci\'on en los curriculum nacionales y regionales. Los ejemplos con mayor repercusi\'on han sido, en el panorama internacional, los de Inglaterra, con una nueva asignatura ``Computing'' obligatoria desde primero de primaria, y Estonia, donde la programaci\'on se usa de manera transversal para trabajar diversas asignaturas de primaria y secundaria; y en el caso de Espa\~na, los de Navarra, que ha incluido la programaci\'on en 4º y 5º de primaria asociada al \'area de matem\'aticas, y la Comunidad de Madrid, que ha incluido contenidos de programaci\'on en la asignatura de tecnolog\'ia de secundaria y ha creado una asignatura optativa de programaci\'on en primaria.
+
+Desde la propia Comisi\'on Europea se est\'a urgiendo a los ministros de la Uni\'on a incluir la programaci\'on inform\'atica en los planes de estudio para que todos los ni\~nos y ni\~nas tengan la oportunidad de desarrollar su pensamiento computacional desde la escuela, ya que estan convencidos de la importancia de esta competencia para la competitividad y la innovaci\'on de nuestro continente. (FIXME referencia)En consecuencia, en los pr\'oximos a\~nos veremos c\'omo la programaci\'on se incluye de forma paulatina en los curriculum de todos los p\'aises europeos, muy probablemente desde la educaci\'on primaria.
+
+\subsection*{C\'omo trabajar y evaluar el pensamiento computacional}
+Sin duda alguna, la inclusi\'on de actividades de programaci\'on con \texttt{Scratch}, un lenguaje de programaci\'on visual desarrollado espec\'ificamente para ni\~nos a partir de 6 a\~nos, se est\'a implantando en todo el mundo como el est\'andar para introducir la programaci\'on y trabajar el pensamiento computacional en la educaci\'on. De hecho, en el momento de escribir este texto, hay m\'as de 8 millones de usuarios registrados en la web de \texttt{Scratch} y m\'as de 11 millones de proyectos compartidos.
+
+No obstante, aunque es posible encontrar r\'ubricas preparadas por distintas entidades educativas para evaluar el pensamiento computacional del alumnado a partir de los proyectos \texttt{Scratch} desarrollados por los aprendices, no existen apenas herramientas que permitan automatizar parte de este proceso para ayudar a los docentes. En consecuencia, muchos docentes tienen problemas para poder estudiar en profundidad los proyectos de sus alumnos y poder sacar conclusiones para, por ejemplo, aconsejar a sus alumnos acerca de otros bloques que podr\'ian incorporar a sus programas, formar grupos de estudiantes para trabajar un concepto espec\'ifico que no parecen haber comprendido completamente, o plantearles proyectos avanzados para desarrollar un aspecto concreto una vez alcanzado un determinado nivel. Y este es el motivo que nos llev\'o a crear la herramienta \texttt{Dr.}{\tiny{ }}\texttt{Scratch}, con el objetivo fundamental de asistir a los docentes en el proceso de ense\~nanza y evaluaci\'on de esta competencia.
+
+\subsection*{Dr. Scratch y el pensamiento computacional}
+La herramienta \texttt{Dr.}{\tiny{ }}\texttt{Scratch} permite, entre otras funcionalidades, evaluar el grado de desarrollo del pensamiento computacional a partir de un programa \texttt{Scratch}. Las dimensiones evaluadas son las siguientes:
+\begin{itemize}
+ \item Abstracci\'on y descomposici\'on de problemas
+ \item Nociones de algoritmia y control del flujo de los programas
+ \item Pensamiento l\'ogico
+ \item Paralelismo
+ \item Sincronizaci\'on
+ \item Representaci\'on de la informaci\'on
+ \item Interactividad con el usuario
+\end{itemize}
+\section{Usando Dr.  Scratch}
+\section{Desarrollando los distintos aspectos del pensamiento computacional con Dr.  Scratch}
+Para cada una de las dimensiones del pensamiento computacional que \texttt{Dr.}{\tiny{ }}\texttt{Scratch} eval\'ua, la herramienta asigna una puntuaci\'on entre 0 y 3 puntos, en funci\'on del grado de desarrollo demostrado en la programaci\'on del proyecto analizado. Para aquellas dimensiones en las que existe margen de mejora, \texttt{Dr.}{\tiny{ }}\texttt{Scratch} ofrece informaci\'on para conocer nuevas posibilidades y seguir mejorando cada uno de estos aspectos.
+\subsection{Abstracci\'on y descomposici\'on de problemas}
+La capacidad de abstracci\'on y descomposici\'on de problemas te ayuda a dividir un problema en partes m\'as peque\~nas que ser\'an m\'as f\'aciles de comprender, programar y depurar.
+
+\subsubsection{Si has sacado 0 puntos...}
+Cuando se comienza a programar con \texttt{Scratch}, en ocasiones puede parecer que la soluci\'on m\'as sencilla es programar todo el comportamiento de un personaje en un \'unico programa. Sin embargo, lo ideal es que el comportamiento del personaje sea controlado por diferentes programas y que cada uno de estos programas se ocupe de una cuesti\'on concreta. Veamos un ejemplo:
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/abs1.jpg}
+\caption*{Figura 1: Fragmento de c\'odigo con nivel 0 en abstracci\'on.}
+\end{figure}
+
+
+Este proyecto, que pinta un dibujo en la pantalla, ha sido programado en un \'unico programa que dibuja las dos l\'ineas que componen el dibujo. Aunque es una opci\'on v\'alida, una opci\'on m\'as sencilla de programar y de mantener es dividir el programa en dos partes, de forma que tengamos dos programas diferentes, uno para pintar la primera l\'inea y otro para pintar la segunda:
+\newpage
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/abs2.jpg}
+\caption*{Figura 2: Fragmento de c\'odigo con nivel 1 en abstracci\'on.}
+\end{figure}
+
+
+De este modo, si queremos por ejemplo realizar alguna modificaci\'on en una de las l\'ineas dibujadas, es mucho m\'as sencillo saber a qu\'e parte del programa tenemos que dirigirnos para llevar a cabo los cambios.
+\subsubsection{Si has sacado 1 punto...}
+\texttt{Scratch} permite crear nuevos bloques definidos por los usuarios que se componen de una secuencia de instrucciones. Estas abstracciones permiten crear programas m\'as sencillos de leer, de programar y de mantener. Veamos un ejemplo: 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/abs3.jpg}
+\caption*{Figura 3: Fragmento de c\'odigo con bloques repetidos.}
+\end{figure}
+
+
+Este proyecto \texttt{Scratch}  dibuja dos l\'ineas naranjas de diferente longitud en la pantalla. En lugar de repetir el c\'odigo 2 veces, tal como vemos en el ejemplo, es posible definir un bloque ?PintaNaranja? que se compone de los bloques que pintan una l\'inea naranja en la pantalla y al que se le puede indicar cu\'al es la longitud de la l\'inea. Para ello hay que irse a la categor\'ia ?M\'as Bloques? y pulsar en el bot\'on Crear un bloque:
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/abs4.jpg}
+\caption*{Figura 4: Funci\'on propia para evitar repetir c\'odigo.}
+\end{figure}
+
+
+Una vez definido el bloque ?PintaNaranja? es posible utilizarlo en cualquier programa del proyecto, tal como vemos a continuaci\'on:
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/abs5.jpg}
+\caption*{Figura 5: Usando nuestra propia función.}
+\end{figure}
+
+
+De este modo, evitamos la repetici\'on de c\'odigo, lo que hace que nuestros proyectos sean m\'as f\'aciles de programar y mantener. Tal como se puede observar, la primera vez que se usa el bloque PintaNaranja se le indica una longitud de 100 pasos, mientras que la segunda vez la longitud es de 200 pasos.
+\subsubsection{Si has sacado 2 puntos...}
+
+En algunos proyectos \texttt{Scratch} queremos tener muchos personajes iguales que realizan exacatamente las mismas acciones. La primera idea que se nos ocurre para conseguirlo es crear un personaje, programar todo su comportamiento y, una vez que est\'a listo, crear tantas copias como necesitemos. Por tanto, si queremos 20 marcianitos, hay que crear 20 objetos iguales. Sin embargo, ¿qu\'e ocurrir\'ia si quiero realizar un cambio en un programa? Tendr\'ia que ir objeto por objeto realizando esa modificaci\'on.
+
+Para este tipo de situaciones es preferible utilizar clones, un tipo de abstracci\'on que nos ayuda a poder programar un solo objeto, y crear de forma din\'amica copias exactas con el mismo comportamiento. 
+Veamos c\'omo funcionan con un ejemplo. Imagina que queremos simular que est\'a nevando en un proyecto. Podemos dibujar un objeto que sea un copo de nive, y una vez que comience la ejecuci\'on del proyecto, ir creando clones constantemente que aparezcan en la parte superior de la pantalla y vayan cayendo hasta la parte inferior:
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/abs6.jpg}
+\caption*{Figura 6: Usando clones.}
+\end{figure}
+
+
+De este modo, tan solo programando un personaje podemos tener infinitos clones, que se crean en un momento determinado de la ejecuci\'on del proyecto y se borran cuando ya no son necesarios.
+
+\frameboxbegin{En resumen...}
+Aprender a abstraer ayuda a ver grandes problemas difíciles de resolver en pequeños problemas de fácil solución, favoreciendo, además, a que se desarrolle un proyecto de una forma más eficiente.
+\frameboxend
+\subsection{Nociones de algoritmia y control del flujo de los programas}
+\subsection{Pensamiento l\'ogico}
+\subsection{Paralelismo}
+\subsection{Sincronizaci\'on}
+\subsection{Representaci\'on de la informaci\'on}
+\subsection{Interactividad con el usuario}
+
+\section{Promoviendo buenos h\'abitos de programaci\'on con Dr.  Scratch}
+\subsection{Nombrado de objetos}
+\subsection{C\'odigo muerto}
+\subsection{Inicializaci\'on de los atributos de los personajes}
+\subsection{Repetici\'on de c\'odigo}
+\section{Conclusiones finales}
+
+\end{document}          
