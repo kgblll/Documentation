@@ -3,6 +3,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
 
 \include{defs}
 
@@ -121,17 +123,17 @@ Una vez definido el bloque ?PintaNaranja? es posible utilizarlo en cualquier pro
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.25\textwidth]{img/abs5.jpg}
-\caption*{Figura 5: Usando nuestra propia función.}
+\caption*{Figura 5: Usando nuestra propia funci\'on.}
 \end{figure}
 
 
 De este modo, evitamos la repetici\'on de c\'odigo, lo que hace que nuestros proyectos sean m\'as f\'aciles de programar y mantener. Tal como se puede observar, la primera vez que se usa el bloque PintaNaranja se le indica una longitud de 100 pasos, mientras que la segunda vez la longitud es de 200 pasos.
 \subsubsection{Si has sacado 2 puntos...}
 
-En algunos proyectos \texttt{Scratch} queremos tener muchos personajes iguales que realizan exacatamente las mismas acciones. La primera idea que se nos ocurre para conseguirlo es crear un personaje, programar todo su comportamiento y, una vez que est\'a listo, crear tantas copias como necesitemos. Por tanto, si queremos 20 marcianitos, hay que crear 20 objetos iguales. Sin embargo, ¿qu\'e ocurrir\'ia si quiero realizar un cambio en un programa? Tendr\'ia que ir objeto por objeto realizando esa modificaci\'on.
+En algunos proyectos \texttt{Scratch} queremos tener muchos personajes iguales que realizan exactamente las mismas acciones. La primera idea que se nos ocurre para conseguirlo es crear un personaje, programar todo su comportamiento y, una vez que est\'a listo, crear tantas copias como necesitemos. Por tanto, si queremos 20 marcianitos, hay que crear 20 objetos iguales. Sin embargo, ¿qu\'e ocurrir\'ia si quiero realizar un cambio en un programa? Tendr\'ia que ir objeto por objeto realizando esa modificaci\'on.
 
 Para este tipo de situaciones es preferible utilizar clones, un tipo de abstracci\'on que nos ayuda a poder programar un solo objeto, y crear de forma din\'amica copias exactas con el mismo comportamiento. 
-Veamos c\'omo funcionan con un ejemplo. Imagina que queremos simular que est\'a nevando en un proyecto. Podemos dibujar un objeto que sea un copo de nive, y una vez que comience la ejecuci\'on del proyecto, ir creando clones constantemente que aparezcan en la parte superior de la pantalla y vayan cayendo hasta la parte inferior:
+Veamos c\'omo funcionan con un ejemplo. Imagina que queremos simular que est\'a nevando en un proyecto. Podemos dibujar un objeto que sea un copo de nieve, y una vez que comience la ejecuci\'on del proyecto, ir creando clones constantemente que aparezcan en la parte superior de la pantalla y vayan cayendo hasta la parte inferior:
 
 \begin{figure}[!h]
 \centering
@@ -142,10 +144,60 @@ Veamos c\'omo funcionan con un ejemplo. Imagina que queremos simular que est\'a 
 
 De este modo, tan solo programando un personaje podemos tener infinitos clones, que se crean en un momento determinado de la ejecuci\'on del proyecto y se borran cuando ya no son necesarios.
 
-\frameboxbegin{En resumen...}
-Aprender a abstraer ayuda a ver grandes problemas difíciles de resolver en pequeños problemas de fácil solución, favoreciendo, además, a que se desarrolle un proyecto de una forma más eficiente.
+\fullboxbegin
+En resumen...
+Aprender a abstraer ayuda a ver grandes problemas dif\'iciles de resolver en peque\~nos problemas de f\'acil soluci\'on, favoreciendo, adem\'as, a que se desarrolle un proyecto de una forma m\'as eficiente.
+\fullboxend
+
+\frameboxbegin{Ejercicio}
+Vamos a proponer un ejercicio para practicar la abstracci\'on. Construye un programa en Scratch en el que el personaje tenga que pintar las letras A, B y C.
 \frameboxend
+
 \subsection{Nociones de algoritmia y control del flujo de los programas}
+Las instrucciones relacionadas con las nociones algor\'itmicas de control de flujo pueden ayudarte a controlar el comportamiento de tus personajes, haciendo, por ejemplo, que repitan ciertos bloques un n\'umero de veces concreto o que lo repitan hasta que se produzca una situaci\'on.
+\subsubsection{Si has sacado 0 puntos...}
+La forma m\'as b\'asica de controlar el comportamiento de tus personajes es creando un programa compuesto por un conjunto de bloques que se ejecutan uno detr\'as de otro, tal como vemos en la imagen:
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/flow1.jpg}
+\caption*{Figura 7: Fragmento de c\'odigo con un solo flujo.}
+\end{figure}
+
+\newpage
+¿C\'omo funciona este programa? Cuando el usuario presione sobre la bandera verde se ejecutar\'an uno detras de otro todos los bloques que se han incluido en el programa. Comenzar\'a por el primero 'decir soy un gato que baila por 2 segundos', luego ejecutar\'a 'mover 10 pasos', a continuaci\'on 'girar 15 grados a la derecha', y as\'i hasta llegar al \'ultimo bloque del programa.
+
+\subsubsection{Si has sacado 1 punto...}
+En ocasiones, cuando queremos que un conjunto de bloques se repita constantemente, en lugar de repetir los mismos bloques una y otra vez, es posible utilizar instrucciones de repetici\'on que permiten conseguir el mismo efecto, pero de forma m\'as c\'omoda y manejable. Veamos un par de ejemplos:
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/flow2.jpg}
+\caption*{Figura 8: Fragmentos de c\'odigo con dos flujos de ejecuci\'on.}
+\end{figure}
+
+¿C\'omo funciona estos bloques de control? En el bloque 'repetir', cuando la ejecuci\'on llega a este punto se repetir\'an tantas veces como se haya indicado en el par\'ametro del bloque 'repetir', en el ejemplo ser\'ian 3 veces, todos los bloques incluidos dentro de este bloque. Podemos ver que el bloque 'repetir' tiene una flechita en la parte inferior que indica que cuando se terminan de ejecutar los bloques se vuelve otra vez para arriba. El bloque 'por siempre' funciona igual que el 'repetir' pero sin terminar nunca de ejecutar los bloques que contiene en su interior.
+
+\subsubsection{Si has sacado 2 puntos...}
+En algunas ocasiones no sabemos previamente el n\'umero de veces que queremos que un conjunto de bloques se ejecute, ya que esto depende de una determinada situaci\'on. En estas ocasiones, el bloque 'repetir hasta que...' es realmente \'util. Veamos un ejemplo:
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/flow3.jpg}
+\caption*{Figura 5: Usando el bloque 'si'.}
+\end{figure}
+
+En el ejemplo, el personaje repetir\'a constantemente la instrucci\'on decir 'No me pillas...' mientras no est\'e tocando al enemigo. En el momento que se cumpla la condici\'on de la instrucci\'on 'repetir hasta que...', terminar\'a de ejecutarse el bloque contenido en su interior y saltar\'a a la siguiente instrucci\'on, en este caso decir' Me pillaste!'.
+
+\fullboxbegin
+En resumen...
+Aprender sobre algoritmia y control de flujo nos ayuda a esquematizar y a poner orden en las acciones que se realizan en nuestro programa.
+\fullboxend
+
+\frameboxbegin{Ejercicio}
+Vamos a proponer un ejercicio para practicar el control de flujo. Construye un programa en Scratch en el que se gu\'ie paso a paso a un cocinero a la hora de realizar la receta de tu plato favorito.
+\frameboxend
+
 \subsection{Pensamiento l\'ogico}
 \subsection{Paralelismo}
 \subsection{Sincronizaci\'on}
