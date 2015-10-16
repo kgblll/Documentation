@@ -184,7 +184,7 @@ En algunas ocasiones no sabemos previamente el n\'umero de veces que queremos qu
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.25\textwidth]{img/flow3.jpg}
-\caption*{Figura 5: Usando el bloque 'si'.}
+\caption*{Figura 9: Usando el bloque 'si'.}
 \end{figure}
 
 En el ejemplo, el personaje repetir\'a constantemente la instrucci\'on decir 'No me pillas...' mientras no est\'e tocando al enemigo. En el momento que se cumpla la condici\'on de la instrucci\'on 'repetir hasta que...', terminar\'a de ejecutarse el bloque contenido en su interior y saltar\'a a la siguiente instrucci\'on, en este caso decir' Me pillaste!'.
@@ -199,7 +199,93 @@ Vamos a proponer un ejercicio para practicar el control de flujo. Construye un p
 \frameboxend
 
 \subsection{Pensamiento l\'ogico}
+Las instrucciones relacionadas con el pensamiento l\'ogico pueden ayudarte a que tus proyectos sean din\'amicos, de forma que se comporten de modo distinto en funci\'on de la situaci\'on. En las historias, por ejemplo, este tipo de instrucciones no son tan importantes, ya que suelen tener una estrucutura lineal que siempre queremos que se ejecute del mismo modo, pero en otro tipo de proyectos, como los videojuegos, son fundamentales para ejecutar acciones diferentes dependiendo de la situaci\'on.
+\subsubsection{Si has sacado 0 puntos...}
+El bloque m\'as b\'asico con el que puedes comenzar a trabajar el pensamiento l\'ogico es \'este: 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/logic1.jpg}
+\caption*{Figura 10: Usando el bloque 'si'.}
+\end{figure}
+
+¿C\'omo funciona este bloque? Cuando la ejecuci\'on llega a este punto, se eval\'ua la condici\'on que aparece en el bloque, y si \'esta es verdadera, se ejecuta el conjunto de bloques que est\'an dentro del si. En el ejemplo, si el personaje est\'a tocando el color azul dir\'ia ?Llegu\'e a la meta?.
+\subsubsection{Si has sacado 1 punto...}
+Ahora que conoces las instrucciones si, quiz\'as puedas comenzar a utilizar bloques si/sino, que pueden ser muy pr\'acticos en muchos tipos de proyectos. Los bloques si/sino son muy parecidos a los bloque si, pero contienen dos conjuntos de bloques en su interior.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/logic2.jpg}
+\caption*{Figura 11: Usando el bloque 'si, si no'.}
+\end{figure}
+
+¿C\'omo funciona este bloque? Cuando la ejecuci\'on llega a este punto, se eval\'ua la condici\'on que aparece en el bloque, y si \'esta es verdadera, se ejecuta el conjunto de bloques que est\'an dentro del si. En el ejemplo, si el personaje est\'a tocando el color azul dir\'ia ?Llegu\'e a la meta?,pero si no est\'a tocando el color morado dir\'ia ?A\'un no he llegado a la meta?.
+\subsubsection{Si has sacado 2 puntos...}
+Para tomar decisiones en algunos proyectos en ocasiones se requiere evaluar m\'as de una condici\'on al mismo tiempo para saber qu\'e hay que ejecutar. En esas situaciones es muy \'util utilizar operaciones l\'ogicas que permiten combinar las condiciones. Las operaciones l\'ogicas disponibles en Scratch son Y, O y No.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/logic3.jpg}
+\caption*{Figura 12: Evaluando condiciones.}
+\end{figure}
+
+La operaci\'on Y es verdadera cuando las dos condiciones de evaluadas son verdaderas. La operaci\'on O es verdadera cuando una de las dos condiciones evaluadas son verdaderas. Y la operaci\'on No valdr\'a lo contrario de la condici\'on, es decir, si la condici\'on es verdadera, No devuelve falso y viceversa.
+
+\fullboxbegin
+En resumen...
+El pensamiento l\'ogico nos ayuda a ejecutar cierto c\'odigo si se cumplen unas determinadas condiciones, evitando ejecutarlo cuando no es necesario.
+\fullboxend
+
+\frameboxbegin{Ejercicio}
+(PENSAR EJERCICIO)
+\frameboxend
 \subsection{Paralelismo}
+En la mayor\'ia de las creaciones Scratch se requiere un cierto nivel de paralelismo. Pero, ¿qu\'e es el paralelismo? El paralelismo es la posibilidad de que varias cosas ocurran al mismo tiempo. Por ejemplo, que dos personajes realicen una acci\'on al mismo tiempo, o que un personaje haga varias cosas a la vez.
+\subsubsection{Si has sacado 0 puntos...}
+
+La forma m\'as b\'asica y m\'as evidente de conseguir paralelismo es tener varios programas que comienzan con ?Al presionar la bandera verde?:
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/paral1.jpg}
+\caption*{Figura 13: Bloque "al pulsar bandera verde".}
+\end{figure}
+
+De este modo, cuando el usuario pinchase sobre la bandera verde, todos los programas que comienzan con este bloque comenzar\'ian a ejecutarse al mismo tiempo, o en paralelo, como tambi\'en puede decirse. Podr\'ias tener varios programas que comiencen con este bloque en un mismo personaje, si quieres que haga varias cosas a la vez, o en programas de diferentes personajes, si quieres que todos comiencen a realizar una acci\'on al comenzar la ejecuci\'on.
+\subsubsection{Si has sacado 1 punto...}
+Otra forma de conseguir paralelismo en tus programas es haciendo que ocurran varias cosas cuando el usuario presiona una tecla o hace click sobre un objeto. Veamos un par de ejemplos: 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/paral2.jpg}
+\includegraphics[width=0.25\textwidth]{img/paral2.jpg}
+\includegraphics[width=0.25\textwidth]{img/paral3.jpg}
+\caption*{Figura 14: C\'odigo que se ejecuta en paralelo.}
+\end{figure}
+
+\newpage
+
+¿C\'omo funcionan estos bloques de control? En las dos primeras figuras de la izquierda vemos fragmentos de c\'odigo iguales que pertenecen a dos personajes distintos, de manera que, cuando se pulsa una tecla, realizan una determinada acci\'on. Por tanto, cuando el usuario pulse la tecla a, en este caso, tanto un personaje como el otro ejecutar\'an al mismo tiempo ?decir A por 2 segundos?. En el \'ultimo ejemplo vemos que un personaje tiene dos programas que comienzan con ?al clickear este objeto?. Por tanto, cuando el usuario haga click sobre este personaje, ambos programas comenzar\'an a ejecutarse al mismo tiempo, en paralelo.
+\subsubsection{Si has sacado 2 puntos...}
+Existen varios eventos m\'as que permiten conseguir paralelismo:
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/paral4.jpg}
+\caption*{Figura 15: Disparadores de eventos.}
+\end{figure}
+
+Como ves, podr\'ias crear varios programas que comenzaran a ejecutarse al cambiar el fondo a un determinado escenario, o al recibir un mensaje concreto, o cuando el volumen del ambiente sea superior a un determinado umbral, cuando el movimiento del v\'ideo se mayor que un n\'umero de pixels concreto o cuando el cron\'ometro haya superado el valor que t\'u quieras. Por tanto, existen muchas posibilidades para conseguir que en tus programas ocurran cosas al mismo tiempo. ¿Te animas a probar algunas de ellas?
+
+\fullboxbegin
+En resumen...
+El paralelismo nos permite ejecutar varias acciones a la vez en un mismo personaje y/o en varios capturando determinados eventos(teclado, rat\'on, sonido, v\'ideo, mensajes...).
+\fullboxend
+
+\frameboxbegin{Ejercicio}
+(PENSAR EJERCICIO)
+\frameboxend
+
+
 \subsection{Sincronizaci\'on}
 \subsection{Representaci\'on de la informaci\'on}
 \subsection{Interactividad con el usuario}
