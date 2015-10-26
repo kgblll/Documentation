@@ -1,30 +1,36 @@
 \select@language {spanish}
-\contentsline {section}{\numberline {1}Introducci\'on}{3}
-\contentsline {section}{\numberline {2}Usando Dr. Scratch}{6}
-\contentsline {section}{\numberline {3}Desarrollando los distintos aspectos del pensamiento computacional con Dr. Scratch}{6}
-\contentsline {subsection}{\numberline {3.1}Abstracci\'on y descomposici\'on de problemas}{6}
-\contentsline {subsubsection}{\numberline {3.1.1}Si has sacado 0 puntos...}{6}
-\contentsline {subsubsection}{\numberline {3.1.2}Si has sacado 1 punto...}{7}
-\contentsline {subsubsection}{\numberline {3.1.3}Si has sacado 2 puntos...}{8}
-\contentsline {subsection}{\numberline {3.2}Nociones de algoritmia y control del flujo de los programas}{9}
-\contentsline {subsubsection}{\numberline {3.2.1}Si has sacado 0 puntos...}{9}
-\contentsline {subsubsection}{\numberline {3.2.2}Si has sacado 1 punto...}{10}
-\contentsline {subsubsection}{\numberline {3.2.3}Si has sacado 2 puntos...}{11}
-\contentsline {subsection}{\numberline {3.3}Pensamiento l\'ogico}{11}
-\contentsline {subsubsection}{\numberline {3.3.1}Si has sacado 0 puntos...}{11}
-\contentsline {subsubsection}{\numberline {3.3.2}Si has sacado 1 punto...}{12}
-\contentsline {subsubsection}{\numberline {3.3.3}Si has sacado 2 puntos...}{12}
-\contentsline {subsection}{\numberline {3.4}Paralelismo}{13}
-\contentsline {subsubsection}{\numberline {3.4.1}Si has sacado 0 puntos...}{13}
-\contentsline {subsubsection}{\numberline {3.4.2}Si has sacado 1 punto...}{13}
-\contentsline {subsubsection}{\numberline {3.4.3}Si has sacado 2 puntos...}{14}
-\contentsline {subsection}{\numberline {3.5}Sincronizaci\'on}{15}
-\contentsline {subsection}{\numberline {3.6}Representaci\'on de la informaci\'on}{15}
-\contentsline {subsection}{\numberline {3.7}Interactividad con el usuario}{15}
-\contentsline {section}{\numberline {4}Promoviendo buenos h\'abitos de programaci\'on con Dr. Scratch}{15}
-\contentsline {subsection}{\numberline {4.1}Nombrado de objetos}{15}
-\contentsline {subsection}{\numberline {4.2}C\'odigo muerto}{15}
-\contentsline {subsection}{\numberline {4.3}Inicializaci\'on de los atributos de los personajes}{15}
-\contentsline {subsection}{\numberline {4.4}Repetici\'on de c\'odigo}{15}
-\contentsline {section}{\numberline {5}Conclusiones finales}{15}
-\contentsline {section}{\numberline {A}Soluci�n a los ejercicios propuestos}{16}
+\contentsline {section}{\numberline {1}Introducci\'on}{4}
+\contentsline {section}{\numberline {2}Usando Dr. Scratch}{7}
+\contentsline {section}{\numberline {3}Desarrollando los distintos aspectos del pensamiento computacional con Dr. Scratch}{7}
+\contentsline {subsection}{\numberline {3.1}Abstracci\'on y descomposici\'on de problemas}{7}
+\contentsline {subsubsection}{\numberline {3.1.1}Si has sacado 0 puntos...}{7}
+\contentsline {subsubsection}{\numberline {3.1.2}Si has sacado 1 punto...}{8}
+\contentsline {subsubsection}{\numberline {3.1.3}Si has sacado 2 puntos...}{9}
+\contentsline {subsection}{\numberline {3.2}Nociones de algoritmia y control del flujo de los programas}{10}
+\contentsline {subsubsection}{\numberline {3.2.1}Si has sacado 0 puntos...}{10}
+\contentsline {subsubsection}{\numberline {3.2.2}Si has sacado 1 punto...}{11}
+\contentsline {subsubsection}{\numberline {3.2.3}Si has sacado 2 puntos...}{12}
+\contentsline {subsection}{\numberline {3.3}Pensamiento l\'ogico}{12}
+\contentsline {subsubsection}{\numberline {3.3.1}Si has sacado 0 puntos...}{12}
+\contentsline {subsubsection}{\numberline {3.3.2}Si has sacado 1 punto...}{13}
+\contentsline {subsubsection}{\numberline {3.3.3}Si has sacado 2 puntos...}{13}
+\contentsline {subsection}{\numberline {3.4}Paralelismo}{14}
+\contentsline {subsubsection}{\numberline {3.4.1}Si has sacado 0 puntos...}{14}
+\contentsline {subsubsection}{\numberline {3.4.2}Si has sacado 1 punto...}{14}
+\contentsline {subsubsection}{\numberline {3.4.3}Si has sacado 2 puntos...}{15}
+\contentsline {subsection}{\numberline {3.5}Sincronizaci\'on}{16}
+\contentsline {subsubsection}{\numberline {3.5.1}Si has sacado 0 puntos...}{16}
+\contentsline {subsubsection}{\numberline {3.5.2}Si has sacado 1 punto...}{17}
+\contentsline {subsubsection}{\numberline {3.5.3}Si has sacado 2 puntos...}{17}
+\contentsline {subsection}{\numberline {3.6}Representaci\'on de la informaci\'on}{18}
+\contentsline {subsubsection}{\numberline {3.6.1}Si has sacado 0 puntos...}{18}
+\contentsline {subsubsection}{\numberline {3.6.2}Si has sacado 1 punto...}{19}
+\contentsline {subsubsection}{\numberline {3.6.3}Si has sacado 2 puntos...}{20}
+\contentsline {subsection}{\numberline {3.7}Interactividad con el usuario}{21}
+\contentsline {section}{\numberline {4}Promoviendo buenos h\'abitos de programaci\'on con Dr. Scratch}{21}
+\contentsline {subsection}{\numberline {4.1}Nombrado de objetos}{21}
+\contentsline {subsection}{\numberline {4.2}C\'odigo muerto}{21}
+\contentsline {subsection}{\numberline {4.3}Inicializaci\'on de los atributos de los personajes}{22}
+\contentsline {subsection}{\numberline {4.4}Repetici\'on de c\'odigo}{22}
+\contentsline {section}{\numberline {5}Conclusiones finales}{22}
+\contentsline {section}{\numberline {A}Soluci�n a los ejercicios propuestos}{22}

@@ -290,7 +290,113 @@ El paralelismo nos permite ejecutar varias acciones a la vez en un mismo persona
 
 
 \subsection{Sincronizaci\'on}
+Las instrucciones relacionadas con la sincronizaci\'on permiten organizar a nuestros personajes para que las cosas ocurran en el orden que nosotros deseamos.
+\subsubsection{Si has sacado 0 puntos...}
+La forma m\'as sencilla de sincronizar el comportamiento de tus personajes es utilizando un bloque 'esperar', que hace que el personaje espere el n\'umero de segundos que escribamos como par\'ametro del bloque. Veamos un ejemplo de c\'omo puede utilizarse este bloque para sincronizar a dos personajes:
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/sync1.jpg}
+\caption*{Figura 16: Usando bloque es 'esperar'.}
+\end{figure}
+\newpage
+En este caso se han utilizado los bloques esperar' para sincronizar a estos dos personajes para que mantengan una conversaci\'on, de forma que mientras uno habla, el otro espera, y viceversa. F\'ijate en que el n\'umero de segundos que cada personaje espera, son iguales al n\'umero de segundos que el otro personaje habla, de manera que nunca hablan al mismo tiempo.
+\subsubsection{Si has sacado 1 punto...}
+La sincronizaci\'on mediante bloques 'esperar' es muy sencilla cuando los programas son peque\~nos y tenemos pocos personajes, pero cuando son m\'as grandes, o cuando tenemos varios personajes, o cuando las condiciones para generar una reacci\'on no pueden ser medidas previamente, es m\'as eficiente utilizar otros modos de sincronizaci\'on como los mensajes. Veamos un ejemplo: 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/sync2.jpg}
+\includegraphics[width=0.25\textwidth]{img/sync3.jpg}
+\caption*{Figura 17: Usando env\'io de mensajes.}
+\end{figure}
+
+øC\'omo funcionan estos bloques de sincronizaci\'on? Cuando se produce una situaci\'on en un personaje que queremos que provoque una reacci\'on en otro personaje, podemos hacer uso del env\'io de mensajes. En el ejemplo, cuando el rat\'on toca al gato, se env\'ia el mensaje 'Pillado', que ser\'a enviado a todos los personajes del proyecto. As\'i, cuando la mariposa recibe el mensaje 'Pillado', se ejecutan las instrucciones incluidas bajo el bloque 'al recibir Pillado'. Por tanto, cuando el usuario toque con el rat\'on al gato, la mariposa dir\'a: 'Has pillado a mi compa\~nero. Ahora tienes que pillarme a m\'i'.
+\subsubsection{Si has sacado 2 puntos...}
+Adem\'as del env\'io de mensajes, es posible sincronizar personajes para que las cosas ocurran en el orden que nosotros deseamos utilizando otro tipo de bloques, como 'esperar hasta que' o 'cuando el fondo cambie a...'.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/sync4.jpg}
+\includegraphics[width=0.25\textwidth]{img/sync5.jpg}
+\caption*{Figura 18: Otros bloques de sincronismo.}
+\end{figure}
+
+En el primer ejemplo, cuando la ejecuci\'on del programa llegue a ese punto se detendr\'a hasta que se cumpla la condici\'on, en este caso hasta que vidas sea igual a 0. Cuando vidas valga 0, entonces continuar\'a la ejecuci\'on del resto de bloques, en este caso 'decir Game Over' y 'detener todos', lo que finalizar\'a la ejecuci\'on del proyecto. En el segundo ejemplo, en el momento en el que el escenario cambie al fondo con el nombre 'Primavera', el personaje ejecutar\'a los bloques colocados a continuaci\'on de la instrucci\'on 'cuando el fondo cambia a 'Primavera', es decir, que se mostrar\'a y dir\'a '°Ha llegado la primavera'.
+\fullboxbegin
+En resumen...
+El sincronismo permite que las cosas ocurran en el orden que nosotros queramos.
+\fullboxend
+
+\frameboxbegin{Ejercicio}
+Realizar un programa en Scratch en el que se env\'ie mensajes entre dos personajes.
+\frameboxend
 \subsection{Representaci\'on de la informaci\'on}
+Cada proyecto Scratch necesita un conjunto de informaci\'on sobre los personajes para poder ejecutarse correctamente. Por ejemplo, necesita conocer la posici\'on de cada personaje, la direcci\'on a la que est\'a apuntando, su tama\~no, etc. Adem\'as, los programadores podemos crear nuevos dep\'ositos de informaci\'on para guardar otro tipo de datos, como el nivel en el que nos encontramos, el tiempo transcurrido, la puntaci\'on, las vidas, las recompensas recogidas...
+\subsubsection{Si has sacado 0 puntos...}
+Cada personaje de un proyecto Scratch tiene una serie de caracter\'isticas, o atributos, que en cada momento de ejecuci\'on del proyecto tienen un valor, y que pueden ser modificadas por los programas. Por ejemplo, un personaje tiene un tama\~no determinado que puede ser modificado por el bloque 'cambiar tama\~no por 10', haciendo que el personaje aparezca un poco m\'as grande. A continuaci\'on mostramos la lista de atributos que tiene cada personaje y los bloques que pueden utilizarse para modificarlos: 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/data1.jpg}
+\caption*{Figura 19: Posici\'on.}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/data2.jpg}
+\caption*{Figura 20: Tama\~no.}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/data3.jpg}
+\caption*{Figura 21: Orientaci\'on.}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/data4.jpg}
+\caption*{Figura 22: Disfraz.}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/data5.jpg}
+\caption*{Figura 23: Visibilidad.}
+\end{figure}
+\subsubsection{Si has sacado 1 punto...}
+Adem\'as de modificar los atributos de los personajes, los programadores podemos utilizar otros mecanismos para almacenar informaci\'on en un proyecto Scratch. Uno de estos mecanismos son las variables, que permiten almacenar un valor para guardar distintos tipos de datos que podemos necesitar: en qu\'e nivel nos encontramos, cu\'antas vidas nos quedan, cu\'antos puntos llevamos, c\'omo se llama el usuario... Para crear una variable hay que irse a la categor\'ia de Datos, pinchar sobre 'Crear una variable' y darle un nombre. En el ejemplo que mostramos a continuaci\'on le hemos dado el nombre 'Puntos', ya que la utilizaremos para guardar el n\'umero de puntos que consigue nuestro personaje. 
+\newpage
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.25\textwidth]{img/data6.jpg}
+\caption*{Figura 24: Variables.}
+\end{figure}
+En el prorgrama de la izquierda asignamos el n\'umero de puntos con los que queremos que el personaje comience la partida, en este caso 0, para lo que utilizamos el bloque 'fijar Puntos a 0'. Sin embargo en el programa de la derecha lo que hacemos es que cuando el personaje toque el color azul, que podr\'ia ser el de un objetivo, le vamos a sumar un punto, para lo que utilizamos el bloque 'cambiar Puntos por 1'. En este caso, el bloque 'cambiar' comprobar\'ia el valor actual de la variable Puntos y le sumar\'ia 1: si vale 0, le sumo 1 y ahora vale 1; si vale 1, le sumo 1 y ahora vale 2...
+\subsubsection{Si has sacado 2 puntos...}
+Adem\'as de las variables, Scratch permite utilizar otro tipo de datos para guardar informaci\'on de un proyecto: las listas. Las listas permiten almacenar m\'as de un valor al mismo tiempo, por lo que son ideales para guardar las recompensas que han sido recuperadas por un personaje, o un conjunto de nombres, por plantear un par de ejemplos. Para crear una lista, hay que irse a la categor\'ia de Datos, pinchar sobre 'Crear una lista' y darle un nombre. En el ejemplo, nosotros hemos llamado a nuestra lista 'Estudiantes': 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\textwidth]{img/data7.jpg}
+\caption*{Figura 25: Otros bloques de sincronismo.}
+\end{figure}
+\newpage
+øQu\'e hemos hecho con este programa? Lo primero que hacemos al comenzar la ejecuci\'on es borrar todos los elementos de la lista Estudiantes, para vaciarla completamente y que no aparezcan elementos de una ejecuci\'on anterior del proyecto. A continuaci\'on le pedimos tres veces al usuario que introduzca un nombre, y cada nombre introducido lo insertamos en la \'ultima posici\'on de la lista Estudiantes. øQu\'e podemos hacer con la lista? Podr\'iamos, por ejemplo, utilizarla para sacar a un voluntario a realizar un ejercicio a la pizarra digital. Fijaos en las nuevas instrucciones que a\~nadimos al programa:
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\textwidth]{img/data8.jpg}
+\caption*{Figura 26: Otros bloques de sincronismo.}
+\end{figure}
+
+Hemos generado un n\'umero al azar entre 1 y 3, que son los elementos que hay en la lista, y hemos seleccionado al elemento que ocupa esa posici\'on en la lista. Unas veces cogeremos el nombre que est\'a en la posici\'on 1, otras al que est\'a en la posici\'on 2 y otras al de la posici\'on 3. Las listas tienen muchas posibilidades y muchas operaciones disponibles... øte animas a investigar c\'omo funcionan?
+\fullboxbegin
+En resumen...
+El sincronismo permite que las cosas ocurran en el orden que nosotros queramos.
+\fullboxend
+
+\frameboxbegin{Ejercicio}
+Realizar un programa en Scratch en el que se env\'ie mensajes entre dos personajes.
+\frameboxend
+
 \subsection{Interactividad con el usuario}
 
 \section{Promoviendo buenos h\'abitos de programaci\'on con Dr.  Scratch}
