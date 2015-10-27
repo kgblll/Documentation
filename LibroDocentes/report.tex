@@ -81,7 +81,7 @@ Analizar un proyecto con Dr. Scratch es realmente sencillo. Para ello, hay que v
 \includegraphics[width=0.7\textwidth]{img/portada.png}
 \caption{Página principal de Dr. Scratch}
 \end{figure}
-
+  
 Tras elegir el proyecto y pulsar en el botón de analisis, \texttt{Dr.}{\tiny{ }}\texttt{Scratch} muestra la ventana de resultados con información sobre el grado de desarrollo de los diferentes aspectos del pensamiento computacional analizados, así como información sobre ciertos detalles que podrían mejorarse en la implementación del proyecto.
 
 \begin{figure}[!h]
@@ -415,13 +415,36 @@ Realizar un programa en Scratch en el que se env\'ie mensajes entre dos personaj
 
 \section{Promoviendo buenos h\'abitos de programaci\'on con Dr.  Scratch}
 \subsection{Nombrado de objetos}
+Al comenzar a programar con Scratch es bastante habitual dejar el nombre que Scratch asigna por defecto a los nuevos personajes (objeto1, objeto2...). Cuando tenemos pocos personajes, es bastante sencillo saber qué personaje tiene cada nombre; no obstante, cuando el número de personajes crece, la cosa se complica. Por tanto, es muy bueno acostumbrarse a poner un nombre significativo (que reconozcamos fácilmente) a cada objeto de nuestros proyectos, ya que nuestros programas se leerán mejor y se programarán más rápidamente. ¡Evita los nombres por defecto! 
 \subsection{C\'odigo muerto}
+El código muerto son partes de los programas que no llegan nunca a ejecutarse. ¿Cómo puede formarse código muerto? Por ejemplo, cuando tienes un programa que no comienza con un bloque de tipo sombrero, o cuando hay un programa que está esperando a que le llegue un mensaje que nadie envía. 
+
+FIXME Figura 
+
+Estas situaciones suelen ser la causa de proyectos que no funcionan como se espera de ellos, así que, ¡trata de evitar código muerto en tus programas! 
 \subsection{Inicializaci\'on de los atributos de los personajes}
+Uno de los errores que más repetimos todos los programadores al aprender a programar es no inicalizar correctamente los atributos de los objetos. ¿Qué son los atributos? Son características de un personaje que pueden ser modificadas en la ejecución de un proyecto, como su posición, su tamaño, su color, su orientación...
+
+Cuando tengas bloques que modifiquen un atributo de un personaje, siempre deberías tener un programa que, al comenzar a ejecutar el proyecto, asigne el valor con el que queremos que comience. Por ejemplo, si se modifica la posición de un personaje, deberíamos tener un bloque ?ir a? bajo ?al pulsar la bandera verde?, para colocar al personaje en su posición inicial. 
+
+FIXME Figura
+
 \subsection{Repetici\'on de c\'odigo}
+Imagina que en un proyecto tenemos dos programas que se componen de los mismos bloques y en los que solo varían los parámetros o valores de los bloques.
+
+FIXME Figura 1
+
+¿Qué ocurriría si quisiéramos hacer una pequeña modificación? Tendríamos que modificar ambos programas, lo que complica el mantenimiento del código. En estas situaciones es mucho más adecuado que el programador cree un bloque propio que defina este comportamiento y que utilice este nuevo bloque en todos los programas donde lo necesite. 
+
+FIXME Figura 2
+
+De este modo, si se quiere realizar una modificación, tan solo hay que ir al bloque definido por el programador. 
+
 \section{Conclusiones finales}
 Este documento presenta una guía sobre el uso de Dr. Scratch como herramienta de apoyo para desarrollar el pensamiento computacional, que ha sido diseñada con el objetivo de ayudar a los docentes a comprender las diferentes dimensiones que componen esta competencia, y ofrecer ideas y estrategias para su trabajo en el aula con el alumnado.
 
 Esta guía, como todo el proyecto Dr. Scratch, se comparte con una licencia libre y se encuentra disponible en un repositorio público\footnote{https://github.com/kgblll/Documentation/tree/master/LibroDocentes}, de manera que animamos al lector a compartir sus opiniones y críticas para que podamos seguir mejorando el documento, y del mismo modo, le animamos a participar activamente en el desarrollo de la próxima versión del mismo.
+
 \appendix
 \section{Solución a los ejercicios propuestos}
 FIXME: Quizás podrían crearse estudios por cada uno de los ejercicios propuestos (que en principio solo tendrían un proyecto programado por nosotros con la solución), de forma que animemos a la gente a compartir sus soluciones añadiendo sus proyectos al estudio.
