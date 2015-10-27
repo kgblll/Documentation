@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.10.12)  27 OCT 2015 14:27
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.10.12)  27 OCT 2015 14:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1094,17 +1094,6 @@ LaTeX Font Warning: Font shape `EU1/Lato-Black.ttf(0)/bx/n' undefined
 (./report.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [2
-
-]
 Missing character: There is no � in font [Lato-Bold.ttf]/OT:script=latn;languag
 e=DFLT;mapping=tex-text;mapping=tex-text;!
 )
@@ -1119,7 +1108,9 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [3]
+<use  "logo.png" > [2
+
+]
 ! Text line contains an invalid character.
 l.25 \section{Introducci^^S
                            \'on}
@@ -1144,7 +1135,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [4
+<use  "logo.png" > [3
 
 ]
 LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 59.
@@ -1160,7 +1151,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [5]
+<use  "logo.png" > [4]
 Overfull \hbox (17.21523pt too wide) in paragraph at lines 61--62
 \EU1/Lato-Regular.ttf(0)/m/n/12 cativas para evaluar el pensamiento computacion
 al del alumnado a partir de los proyectos \EU1/lmtt/m/n/12 Scratch
@@ -1185,7 +1176,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [6]
+<use  "logo.png" > [5]
 ! Text line contains an invalid character.
 l.78 \subsection{Abstracci^^S
                              \'on y descomposici^^S\'on de problemas}
@@ -1207,7 +1198,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [7]
+<use  "logo.png" > [6]
 File: img/abs2.jpg Graphic file (type QTm)
  <use  "img/abs2.jpg" >
 File: img/abs3.jpg Graphic file (type QTm)
@@ -1219,7 +1210,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [8]
+<use  "logo.png" > [7]
 File: img/abs4.jpg Graphic file (type QTm)
  <use  "img/abs4.jpg" >
 File: img/abs5.jpg Graphic file (type QTm)
@@ -1242,7 +1233,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [9]
+<use  "logo.png" > [8]
 File: img/flow1.jpg Graphic file (type QTm)
  <use  "img/flow1.jpg" >
 
@@ -1255,7 +1246,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [10]
+<use  "logo.png" > [9]
 File: img/flow2.jpg Graphic file (type QTm)
  <use  "img/flow2.jpg" >
 
@@ -1265,7 +1256,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [11]
+<use  "logo.png" > [10]
 File: img/flow3.jpg Graphic file (type QTm)
  <use  "img/flow3.jpg" >
 ! Text line contains an invalid character.
@@ -1286,7 +1277,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [12]
+<use  "logo.png" > [11]
 File: img/logic2.jpg Graphic file (type QTm)
  <use  "img/logic2.jpg" >
 File: img/logic3.jpg Graphic file (type QTm)
@@ -1298,7 +1289,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [13]
+<use  "logo.png" > [12]
 File: img/paral1.jpg Graphic file (type QTm)
  <use  "img/paral1.jpg" >
 File: img/paral2.jpg Graphic file (type QTm)
@@ -1318,7 +1309,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [14]
+<use  "logo.png" > [13]
 File: img/paral4.jpg Graphic file (type QTm)
  <use  "img/paral4.jpg" >
 
@@ -1328,7 +1319,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [15]
+<use  "logo.png" > [14]
 ! Text line contains an invalid character.
 l.289 \subsection{Sincronizaci^^S
                                  \'on}
@@ -1344,7 +1335,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [16]
+<use  "logo.png" > [15]
 File: img/sync2.jpg Graphic file (type QTm)
  <use  "img/sync2.jpg" >
 File: img/sync3.jpg Graphic file (type QTm)
@@ -1373,7 +1364,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [17]
+<use  "logo.png" > [16]
 ! Text line contains an invalid character.
 l.330 \subsection{Representaci^^S
                                  \'on de la informaci^^S\'on}
@@ -1415,7 +1406,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [18]
+<use  "logo.png" > [17]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1423,7 +1414,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [19]
+<use  "logo.png" > [18]
 File: img/data6.jpg Graphic file (type QTm)
  <use  "img/data6.jpg" >
 File: img/data7.jpg Graphic file (type QTm)
@@ -1435,7 +1426,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [20]
+<use  "logo.png" > [19]
 Invalid UTF-8 byte or sequence at line 380 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 380 replaced by U+FFFD.
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
@@ -1491,7 +1482,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [21]
+<use  "logo.png" > [20]
 Invalid UTF-8 byte or sequence at line 405 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 405 replaced by U+FFFD.
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
@@ -1547,7 +1538,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 File: logo.png Graphic file (type QTm)
-<use  "logo.png" > [22] (./report.aux
+<use  "logo.png" > [21] (./report.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 )
@@ -1556,12 +1547,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 28171 strings out of 495604
- 576370 string characters out of 6186521
+ 28168 strings out of 495604
+ 576308 string characters out of 6186521
  693164 words of memory out of 5000000
- 30968 multiletter control sequences out of 15000+600000
+ 30965 multiletter control sequences out of 15000+600000
  7348 words of font info for 50 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 59i,16n,75p,10410b,619s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,16n,75p,10410b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.pdf (22 pages).
+Output written on report.pdf (21 pages).
