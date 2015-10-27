@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.10.12)  27 OCT 2015 12:54
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.10.12)  27 OCT 2015 14:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -924,19 +924,7 @@ Continue, and I'll forget that it ever happened.
 
 ! Text line contains an invalid character.
 l.15 \author{Gregorio Robles, Jes^^S
-                                    \'us Moreno, Mar\'i^^S^^Pa Luz Aguado, E...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-! Text line contains an invalid character.
-l.15 ...gorio Robles, Jes^^S\'us Moreno, Mar\'i^^S
-                                                  ^^Pa Luz Aguado, Eva Hu}
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-! Text line contains an invalid character.
-l.15 ...io Robles, Jes^^S\'us Moreno, Mar\'i^^S^^P
-                                                  a Luz Aguado, Eva Hu}
+                                    \'us Moreno, Mari Luz Aguado, Eva Hu}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
 
@@ -1087,6 +1075,11 @@ Underfull \hbox (badness 4954) in paragraph at lines 20--20
 []\EU1/Lato-Black.ttf(0)/m/n/20.74 Gíua docente: uso de Dr. Scratch
  []
 
+
+Underfull \hbox (badness 1502) in paragraph at lines 20--20
+[]\EU1/Lato-Black.ttf(0)/m/n/17.28 Gregorio Robles, Jesús Moreno, Mari Luz
+ []
+
 File: cover.png Graphic file (type QTm)
 <use  "cover.png" > [1
 
@@ -1128,17 +1121,17 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 File: logo.png Graphic file (type QTm)
 <use  "logo.png" > [3]
 ! Text line contains an invalid character.
-l.28 \section{Introducci^^S
+l.25 \section{Introducci^^S
                            \'on}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 33.
+(Font)              <7> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 33.
+(Font)              <5> on input line 30.
 
-Overfull \hbox (12.24405pt too wide) in paragraph at lines 33--34
+Overfull \hbox (12.24405pt too wide) in paragraph at lines 30--31
 []\EU1/Lato-Regular.ttf(0)/m/n/12 Jeannette Wing, en su artículo \EU1/Lato-Regu
 lar.ttf(0)/m/it/12 Computational Thinking[] \EU1/Lato-Regular.ttf(0)/m/n/12 est
 ablece que el “pensamiento compu-
@@ -1154,6 +1147,12 @@ File: logo.png Graphic file (type QTm)
 <use  "logo.png" > [4
 
 ]
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 59.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
+File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1162,21 +1161,15 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 File: logo.png Graphic file (type QTm)
 <use  "logo.png" > [5]
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 62.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
-File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Overfull \hbox (17.21523pt too wide) in paragraph at lines 64--65
+Overfull \hbox (17.21523pt too wide) in paragraph at lines 61--62
 \EU1/Lato-Regular.ttf(0)/m/n/12 cativas para evaluar el pensamiento computacion
 al del alumnado a partir de los proyectos \EU1/lmtt/m/n/12 Scratch
  []
 
-Invalid UTF-8 byte or sequence at line 78 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 78 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 78 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 78 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 75 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 75 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 75 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 75 replaced by U+FFFD.
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
@@ -1194,13 +1187,13 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 File: logo.png Graphic file (type QTm)
 <use  "logo.png" > [6]
 ! Text line contains an invalid character.
-l.81 \subsection{Abstracci^^S
+l.78 \subsection{Abstracci^^S
                              \'on y descomposici^^S\'on de problemas}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
 
 ! Text line contains an invalid character.
-l.81 ...section{Abstracci^^S\'on y descomposici^^S
+l.78 ...section{Abstracci^^S\'on y descomposici^^S
                                                   \'on de problemas}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
@@ -1231,7 +1224,7 @@ File: img/abs4.jpg Graphic file (type QTm)
  <use  "img/abs4.jpg" >
 File: img/abs5.jpg Graphic file (type QTm)
  <use  "img/abs5.jpg" >
-Overfull \hbox (4.90805pt too wide) in paragraph at lines 136--137
+Overfull \hbox (4.90805pt too wide) in paragraph at lines 133--134
 []\EU1/Lato-Regular.ttf(0)/m/n/12 En algunos proyectos \EU1/lmtt/m/n/12 Scratch
  \EU1/Lato-Regular.ttf(0)/m/n/12 queremos tener muchos personajes iguales que r
 ealizan exac-
@@ -1276,7 +1269,7 @@ File: logo.png Graphic file (type QTm)
 File: img/flow3.jpg Graphic file (type QTm)
  <use  "img/flow3.jpg" >
 ! Text line contains an invalid character.
-l.204 \subsection{Pensamiento l^^S
+l.201 \subsection{Pensamiento l^^S
                                   \'ogico}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
@@ -1337,7 +1330,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 File: logo.png Graphic file (type QTm)
 <use  "logo.png" > [15]
 ! Text line contains an invalid character.
-l.292 \subsection{Sincronizaci^^S
+l.289 \subsection{Sincronizaci^^S
                                  \'on}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
@@ -1356,7 +1349,7 @@ File: img/sync2.jpg Graphic file (type QTm)
  <use  "img/sync2.jpg" >
 File: img/sync3.jpg Graphic file (type QTm)
  <use  "img/sync3.jpg" >
-Invalid UTF-8 byte or sequence at line 313 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
 File: img/sync4.jpg Graphic file (type QTm)
@@ -1364,12 +1357,12 @@ File: img/sync4.jpg Graphic file (type QTm)
 <use  "img/sync4.jpg" >
 File: img/sync5.jpg Graphic file (type QTm)
  <use  "img/sync5.jpg" >
-Invalid UTF-8 byte or sequence at line 321 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 318 replaced by U+FFFD.
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
-Invalid UTF-8 byte or sequence at line 327 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 324 replaced by U+FFFD.
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
 
@@ -1382,13 +1375,13 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 File: logo.png Graphic file (type QTm)
 <use  "logo.png" > [17]
 ! Text line contains an invalid character.
-l.333 \subsection{Representaci^^S
+l.330 \subsection{Representaci^^S
                                  \'on de la informaci^^S\'on}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
 
 ! Text line contains an invalid character.
-l.333 ...on{Representaci^^S\'on de la informaci^^S
+l.330 ...on{Representaci^^S\'on de la informaci^^S
                                                   \'on}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
@@ -1443,50 +1436,50 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 File: logo.png Graphic file (type QTm)
 <use  "logo.png" > [20]
-Invalid UTF-8 byte or sequence at line 383 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 383 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 380 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 380 replaced by U+FFFD.
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
 File: img/data8.jpg Graphic file (type QTm)
  <use  "img/data8.jpg" >
-Invalid UTF-8 byte or sequence at line 390 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 387 replaced by U+FFFD.
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
 
 ! Text line contains an invalid character.
-l.402 \section{Promoviendo buenos h^^S
+l.399 \section{Promoviendo buenos h^^S
                                       \'abitos de programaci^^S\'on con Dr. ...
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
 
 ! Text line contains an invalid character.
-l.402 ...endo buenos h^^S\'abitos de programaci^^S
+l.399 ...endo buenos h^^S\'abitos de programaci^^S
                                                   \'on con Dr.  Scratch}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
 
 ! Text line contains an invalid character.
-l.404 \subsection{C^^S
+l.401 \subsection{C^^S
                       \'odigo muerto}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
 
 ! Text line contains an invalid character.
-l.405 \subsection{Inicializaci^^S
+l.402 \subsection{Inicializaci^^S
                                  \'on de los atributos de los personajes}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
 
 ! Text line contains an invalid character.
-l.406 \subsection{Repetici^^S
+l.403 \subsection{Repetici^^S
                              \'on de c^^S\'odigo}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
 
 ! Text line contains an invalid character.
-l.406 \subsection{Repetici^^S\'on de c^^S
+l.403 \subsection{Repetici^^S\'on de c^^S
                                          \'odigo}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
@@ -1499,17 +1492,17 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 File: logo.png Graphic file (type QTm)
 <use  "logo.png" > [21]
-Invalid UTF-8 byte or sequence at line 408 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 408 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 405 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 405 replaced by U+FFFD.
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 407 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 407 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 407 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 407 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 407 replaced by U+FFFD.
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
@@ -1520,20 +1513,28 @@ Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lan
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
-Invalid UTF-8 byte or sequence at line 412 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 409 replaced by U+FFFD.
 Missing character: There is no � in font [Lato-Black.ttf]/OT:script=latn;langua
 ge=DFLT;mapping=tex-text;!
-Invalid UTF-8 byte or sequence at line 413 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 413 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 413 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 413 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 413 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
+Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
+uage=DFLT;mapping=tex-text;mapping=tex-text;!
+Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
+uage=DFLT;mapping=tex-text;mapping=tex-text;!
+File: img/by-sa.png Graphic file (type QTm)
+ <use  "img/by-sa.png" >
+Invalid UTF-8 byte or sequence at line 419 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 419 replaced by U+FFFD.
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
 uage=DFLT;mapping=tex-text;mapping=tex-text;!
 Missing character: There is no � in font [Lato-Regular.ttf]/OT:script=latn;lang
@@ -1555,10 +1556,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 28169 strings out of 495604
- 576348 string characters out of 6186521
+ 28171 strings out of 495604
+ 576370 string characters out of 6186521
  693164 words of memory out of 5000000
- 30967 multiletter control sequences out of 15000+600000
+ 30968 multiletter control sequences out of 15000+600000
  7348 words of font info for 50 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  59i,16n,75p,10410b,619s stack positions out of 5000i,500n,10000p,200000b,80000s
