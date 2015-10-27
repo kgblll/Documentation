@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{hyperref}
 
 \include{defs}
 
@@ -49,11 +50,12 @@ Seg\'un esta definici\'on operativa, el pensamiento computacional es un proceso 
 \end{itemize}
 
 \subsection*{Programaci\'on inform\'atica y pensamiento computacional}
-Aunque el pensamiento computacional puede trabajarse desde muchas disciplinas e incluso sin necesidad de contar con dispositivos electr\'onicos, diversas investigaciones demuestran que la programaci\'on inform\'atica es una muy buena herramienta para desarrollar esta competencia. (FIXME referencia)
+Aunque el pensamiento computacional puede trabajarse desde muchas disciplinas e incluso sin necesidad de contar con dispositivos electr\'onicos, diversas investigaciones demuestran que la programaci\'on inform\'atica es una muy buena herramienta para desarrollar esta competencia\footnote{Review on teaching and learning of computational thinking through programming: What is next for K-12?}.
 
 Por consiguiente, responsables educativos de todo el mundo han comenzado a incluir la programaci\'on en los curriculum nacionales y regionales. Los ejemplos con mayor repercusi\'on han sido, en el panorama internacional, los de Inglaterra, con una nueva asignatura ``Computing'' obligatoria desde primero de primaria, y Estonia, donde la programaci\'on se usa de manera transversal para trabajar diversas asignaturas de primaria y secundaria; y en el caso de Espa\~na, los de Navarra, que ha incluido la programaci\'on en 4º y 5º de primaria asociada al \'area de matem\'aticas, y la Comunidad de Madrid, que ha incluido contenidos de programaci\'on en la asignatura de tecnolog\'ia de secundaria y ha creado una asignatura optativa de programaci\'on en primaria.
 
-Desde la propia Comisi\'on Europea se est\'a urgiendo a los ministros de la Uni\'on a incluir la programaci\'on inform\'atica en los planes de estudio para que todos los ni\~nos y ni\~nas tengan la oportunidad de desarrollar su pensamiento computacional desde la escuela, ya que estan convencidos de la importancia de esta competencia para la competitividad y la innovaci\'on de nuestro continente. (FIXME referencia)En consecuencia, en los pr\'oximos a\~nos veremos c\'omo la programaci\'on se incluye de forma paulatina en los curriculum de todos los p\'aises europeos, muy probablemente desde la educaci\'on primaria.
+Desde la propia Comisi\'on Europea se est\'a urgiendo a los ministros de la Uni\'on a incluir la programaci\'on inform\'atica en los planes de estudio para que todos los ni\~nos y ni\~nas tengan la oportunidad de desarrollar su pensamiento computacional desde la escuela, ya que estan convencidos de la importancia de esta competencia para la competitividad y la innovaci\'on de nuestro continente\footnote{https://ec.europa.eu/digital-agenda/en/news/promoting-coding-skills-europe-part-solution-youth-
+unemployment}. En consecuencia, en los pr\'oximos a\~nos veremos c\'omo la programaci\'on se incluye de forma paulatina en los curriculum de todos los p\'aises europeos, muy probablemente desde la educaci\'on primaria.
 
 \subsection*{C\'omo trabajar y evaluar el pensamiento computacional}
 Sin duda alguna, la inclusi\'on de actividades de programaci\'on con \texttt{Scratch}, un lenguaje de programaci\'on visual desarrollado espec\'ificamente para ni\~nos a partir de 6 a\~nos, se est\'a implantando en todo el mundo como el est\'andar para introducir la programaci\'on y trabajar el pensamiento computacional en la educaci\'on. De hecho, en el momento de escribir este texto, hay m\'as de 8 millones de usuarios registrados en la web de \texttt{Scratch} y m\'as de 11 millones de proyectos compartidos.
@@ -72,7 +74,22 @@ La herramienta \texttt{Dr.}{\tiny{ }}\texttt{Scratch} permite, entre otras funci
  \item Interactividad con el usuario
 \end{itemize}
 \section{Usando Dr.  Scratch}
-FIXME: quizás aquí podríamos meter un par de capturas explicando cómo se analizan proyectos con Dr. Scratch.
+Analizar un proyecto con Dr. Scratch es realmente sencillo. Para ello, hay que visitar el sitio web \url{http://drscratch.org} y elegir el proyecto que queremos analizar. La selección del proyecto puede realizarse tanto escribiendo la url del propio proyecto\footnote{La url del proyecto es parecida a http://scratch.mit.edu/projects/123456}, ideal si estamos trabajando con la versión online de \texttt{Scratch}, o bien subiendo el archivo .sb o .sb2, en caso de que estemos trabajando con la versión offline de la herramienta.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.7\textwidth]{img/portada.png}
+\caption{Página principal de Dr. Scratch}
+\end{figure}
+
+Tras elegir el proyecto y pulsar en el botón de analisis, \texttt{Dr.}{\tiny{ }}\texttt{Scratch} muestra la ventana de resultados con información sobre el grado de desarrollo de los diferentes aspectos del pensamiento computacional analizados, así como información sobre ciertos detalles que podrían mejorarse en la implementación del proyecto.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.7\textwidth]{img/resultados.png}
+\caption{Página de resultados tras analizar un proyecto con Dr. Scratch}
+\end{figure}
+
 \section{Desarrollando los distintos aspectos del pensamiento computacional con Dr.  Scratch}
 Para cada una de las dimensiones del pensamiento computacional que \texttt{Dr.}{\tiny{ }}\texttt{Scratch} eval\'ua, la herramienta asigna una puntuaci\'on entre 0 y 3 puntos, en funci\'on del grado de desarrollo demostrado en la programaci\'on del proyecto analizado. Para aquellas dimensiones en las que existe margen de mejora, \texttt{Dr.}{\tiny{ }}\texttt{Scratch} ofrece informaci\'on para conocer nuevas posibilidades y seguir mejorando cada uno de estos aspectos.
 \subsection{Abstracci\'on y descomposici\'on de problemas}
