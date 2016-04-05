@@ -20,6 +20,8 @@
 \usepackage{graphics}
 \usepackage{amssymb} % Simbolos matematicos
 \usepackage{url}
+\usepackage{multirow}
+
 
 %\definecolor{libresoftgreen}{RGB}{162,190,43}
 %\definecolor{libresoftblue}{RGB}{0,98,143}
@@ -228,7 +230,7 @@ Out of 107 located articles, the final number of selected papers is 15.
 \begin{center}
 	\begin{figure}[t!]
 		\includegraphics[width=5.5cm]{figs/rq2_description.png}    
-    		\caption{Description of the 8 papers under investigation}
+    		\caption{Description of the 8 papers under investigation for RQ2}
 	\end{figure}
 \end{center}
 
@@ -240,7 +242,24 @@ Out of 107 located articles, the final number of selected papers is 15.
 %-----------------------    ---------------------------------
 
 \begin{frame}
-\frametitle{Findings, RQ3}
+\frametitle{Findings, RQ2}
+\begin{table}[]
+\scriptsize
+\centering
+\begin{tabular}{|c|c|p{4.4cm}|p{3.8cm}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Subject}} & \multicolumn{1}{|c|}{\textbf{Paper}} & \multicolumn{1}{|c|}{\textbf{Proved results}} & \multicolumn{1}{|c|}{\textbf{Non-proved results}} \\ \hline\hline
+\multirow{3}{*}{Maths} & [21] & Significantly more positive attitudes towards maths &  \\ \cline{2-4} 
+                  & [22] & Test scores in maths highly correlated with programming performance &  \\ \cline{2-4} 
+                  & [23] & Improvements at comparing numbers and establishing order & No differences at spatial location \\ \hline
+\multirow{2}{*}{Science} & [24] &  & How or if learners deepened their science knowledge \\ \cline{2-4} 
+                  & [25] & 61.5\% reported a better understanding of science &  \\ \hline
+\multirow{2}{*}{L. arts} & [26] & 60\% indicated their storytelling skills improved &  \\ \cline{2-4} 
+                  & [27] & Effective framework for facilitating digital composition &  \\ \hline
+English & [28] & Experimental improved more than control groups &  \\ \hline
+\end{tabular}
+\caption{Programming with Scratch to learn other subjects}
+\end{table}
 \end{frame}
 
 \usebackgroundtemplate{}
