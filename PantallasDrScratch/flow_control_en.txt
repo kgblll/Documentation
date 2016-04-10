@@ -1,0 +1,25 @@
+Flow control
+
+Instructions related to flow control can help you control the behavior of your sprites by making that they repeat some blocks a specific number of times o that they repeat them until certain situation is given, by raising just a couple of examples.
+
+[0 points]
+
+The most basic way of controlling your sprites behavior is creating a program formed by a set of blocks that are executed in order one at a time, as we can see in the picture:
+
+¿How does this program work? When the user press the green flag the blocks will be executed in order one at a time. It will start wit the first block “Say: I am a cat that dances for 2 seconds”, then it will execute “move 10 steps”, then “turn 15 degrees”, following the execution until the last block of the script.
+
+[1 point]
+
+Sometimes, when we’d like a set block is constantly repeated, instead of repeating the same blocks time and time again in our script, it is possible to make use of instructions that allows to get the same effect, but in a more confortable and handy way. Let’s see a couple of examples:
+
+How do these control blocks work?
+
+Once the execution gets to a “repeat“ instruction, the blocks included in the repeat block will be executed as many times as indicated in the parameter of the repeat block; in our example, it would be 3 times. As we can see, the repeat block has a little arrow that indicates that when the blocks have been executed, the execution goes up again.
+
+“Forever” blocks operate exactly like “repeat” blocks, but they never stop executing the blocks they contain.
+
+[2 points]
+
+Sometimes we don’t know in advance the number of times we want a set of blocks to be executed, as it will depend on a specific situation. In this occasions we can use “repeat until” blocks. Let’s take a look at a example:
+
+In the example the sprite will repeat constantly the instruction “Say: you can’t get me” while she is not touching “enemy”. The moment the condition in the “repeat until” is true, the execution will jump until the following block outside “repeat until“. In the example, when the sprite touches “enemy” the execution will jump to “say: you got me!”

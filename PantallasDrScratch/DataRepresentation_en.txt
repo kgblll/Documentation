@@ -1,0 +1,36 @@
+
+Data representation
+
+In order to run properly, Scratch projects need a set of data about the characters. For example, the project needs to know the position of each character, the direction they are pointing to, their size, etc. In addition, developers can create new information repositories to store other data such as the level, the elapsed time, the score, the rewards collected...
+
+[0 points]
+
+Each character of a Scratch project has a number of characteristics, or attributes, that at every moment of the project have value, and that can be modified by the programs. For example, a character has a certain size that can be changed by the block “change size by 10", making the character appear slightly larger. Following is the list of sprites attributes and the blocks that can be used to modify them:
+
+Position
+Size
+Orientation
+Costume
+Visibility
+
+[1 points]
+
+In addition to modifying the attributes of the characters, programmers can use other mechanisms to store information on a Scratch project. One of these mechanisms are variables, which can store a value to keep different types of data that we may need: at what level we are, how many lives you have left, how many points we have scored, how is called the user...
+
+To create a variable you have to click on the Data category, click on “Make a variable" and give it a name. In the example shown below we have given the name "Points", as the variable will be used to store the number of points our character gets.
+
+In the program on the left we assign the number of points that we want the character to begin the game with, in this case 0, so we use the block "Set Points 0". However in the program on the right what we do is that when the character touches the color blue, that could be a target, we add 1 point to the score, so we use the block "change points by 1". In this case, the block "change" would check the current value of the variable points to add 1.
+
+[2 points]
+
+In addition to variables, Scratch allows the use of other data types to store information of a project: lists. Lists can store more than one value at once, so they are ideal for storing rewards that have been recovered by a character or to keep a set of names, for instance.
+
+To create a list, you have to go to the data category, click on “Make a list" and give it a name. In the example, we have named our list ”Students":
+
+What have we done with this program? The first thing to do when the execution starts is to erase all elements of the Students list, to empty it completely so elements from a previous execution of the project do not appear. Then we asked three times the user to enter a name, and each name is inserted in the last position of the Students list.
+
+What can we do with the list? We could, for example, use it to get a volunteer to perform an action in the classroom. Look at the new instructions added to the program:
+
+We generated a random number between 1 and 3, which are the elements in the list, and we have selected the item that occupies that position in the list. Sometimes we’ll take the name that is in position 1, others the one that is in position 2 and others the one at 3.
+
+Lists have many possibilities and many available operations ... you dare to investigate how they work?

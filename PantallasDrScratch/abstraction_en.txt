@@ -1,0 +1,29 @@
+Abstraction and problem decomposition
+
+Abstraction and problem decomposition skills helps you divide a problem into smaller parts that will be easier to understand, program and debug.
+
+[0 points]
+
+When starting to program with Scratch, it sometimes seems that the simplest solution is to program the whole behavior of a sprite in one script. Nevertheless, it is preferable that the behavior of the sprite is controlled by different scripts, each of these scripts handling a concrete issue. Let’s take a look at one example:
+
+This project, that draws a drawing in the screen, has been programmed in one only script that draws the two lines composing the drawing. Though this is a valid option, if we divide the script in two parts , so we have two different scripts (one that draws the first line and another to draw the second one), the result is a project easier to program and maintain.
+
+This way, if we wanted to perform some modification in one of the lines, it is much easier to know which part of the program we have to modify to make the desired changes.
+
+[1 point]
+
+Scratch allows users to make their own blocks, which are formed by a sequence of instructions. By using these abstractions we create programs which are easy to read, program and maintain. Let’s see one example:
+
+This project draws two lines of different length in the screen. Instead of repeating the same set of blocks two times, as we can see in the picture we can define a new block “DrawOrange” that contains the blocks that draw the orange line in the screen. Besides, it is possible to indicate the new block the length of the line. In order to create new blocks you have to click on “More Blocks” and then on “Make a block”.
+
+Once the block is defined, we can use it in any script of the project, as shown in the picture:
+
+This way we have avoided code repetition, which makes our projects easier to program and maintain. As we can see, the first time we use the block “DrawOrange” we indicate a length of 100 steps, while the second time the length is 200 steps.
+
+[2 points]
+
+In some Scratch projects we want to have lots of identical sprites, performing the same exact actions. The first idea that comes to our mind it is probably programming one sprite and, once it is ready, making as many copies as needed. Therefor, if we need 20 “aliens”, we would create 20 identical sprites. However, what would happen if we we want to make a modification in one of the scripts? We would have to make the changes in all the sprites. 
+
+In this kind of situations it is preferable to use clones, a kind of abstraction that helps us to program just one sprite and then, dynamically, create as many copies as we need with the same behavior. Let’s take a look at one example that illustrates clones operation. Imagine that we’d like to simulate snow in a Scratch project. We could draw an object to look like a snowflake, and when the project starts we can constantly create clones that appear in the upper part of the screen to slowly glide downside:
+
+Thus, by programming just one sprite we can have infinite clones, which are created in a specific moment of the project execution and are deleted when not needed.

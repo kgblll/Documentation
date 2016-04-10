@@ -1,0 +1,21 @@
+Logical thinking
+
+Instructions related to logical thinking can help your projects become dynamic, as characters will be able to behave in different ways depending on the situation. In stories, for instance, this kind of instructions are not so important, as they tend to present a fixed, linear structure, but in other type of projects, as video games, logic blocks are essential to execute different actions depending on the situation.
+
+[0 points]
+
+The most basic block to start playing with the logical thinking is this one:
+
+How does this block work? When the execution gets to this point, the condition in the block is evaluated and, if the conditions is true, then the set of blocks inside the “if…then” block is run. In the example, if the sprite is touching the blue color she would say “I got to the finish line”.
+
+[1 point]
+
+Now that your are comfortable with “if…then” instructions, you can start using “if…then/else” blocks, which are very useful in lots of different projects. These blocks are very similar to “if…then” blocks, but they have two set of blocks in their body:
+
+How does this block work? When the execution gets to this point, the condition is evaluated; if condition is true, then the set of blocks in the “if” part of the block is run, but when condition is false, the set of blocks in the “else” part is the one that is executed.   In the example, if the character is touching color blue she would say “I got to the finish line”; however, if the character is not touching color blue, she would say “I did’t get to the finish line yet”.
+
+[2 points]
+
+In some projects, we need to evaluate more than one condition in order to be able to make a decision. In those situations logical operations are very useful, as they allow to combine several conditions. The logical operations available in Scratch are: AND, OR, NOT.
+
+AND operation is true when both evaluated conditions are true. OR operation is true when one of the two evaluated conditions are true. NOT operation is the contrary of the condition: when condition is true, NOT is false, and viceversa.

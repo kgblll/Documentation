@@ -1,0 +1,566 @@
+%
+% $Id: $
+%
+%
+% Compilar a .pdf con LaTeX (pdflatex)
+% Es necesario instalar Beamer (paquete latex-beamer en Debian)
+%
+
+%
+% Gráficos:
+% Los gráficos pueden suministrarse en PNG, JPG, TIF, PDF, MPS
+% Los EPS deben convertirse a PDF (usar epstopdf)
+%
+
+\documentclass{beamer}
+\usetheme{Warsaw}
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{format/libresoft-bg.png}}
+%\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphics}
+\usepackage{amssymb} % Simbolos matematicos
+\usepackage{url}
+
+%\definecolor{libresoftgreen}{RGB}{162,190,43}
+%\definecolor{libresoftblue}{RGB}{0,98,143}
+
+%\setbeamercolor{titlelike}{bg=libresoftgreen}
+
+%% Metadatos del PDF.
+\hypersetup{
+  pdftitle={Dr. Scratch, una herramienta de asistencia al docente en la evaluación de proyectos Scratch},
+  pdfauthor={Jesús Moreno León, Gregorio Robles},
+  pdfcreator={GSyC/LibreSoft \\ Universidad Rey Juan Carlos},
+  pdfproducer=PDFLaTeX,
+  pdfsubject={Learning to code with Scratch. Automatic assesment.},
+}
+%%
+
+\begin{document}
+
+\title{Dr. Scratch, una herramienta de asistencia al docente en la evaluación de proyectos Scratch}
+\institute{jesus.moreno@programamos.es, grex@gsyc.urjc.es \\
+GSyC/Libresoft, Universidad Rey Juan Carlos}
+\author{Jesús Moreno León, Gregorio Robles}
+\date{SIMO Educación, Madrid, 23 de octubre de 2015}
+
+\frame{
+\maketitle
+\begin{center}
+\includegraphics[width=2cm]{format/libresoft-logo}
+\hspace{0.5cm}
+\includegraphics[width=5cm]{format/gsyc-urjc}
+\vspace{0.5cm}
+\includegraphics[width=3cm]{format/emadrid.png}
+\end{center}
+}
+
+
+% Si el titulo o el autor se quieren acortar para los pies de página
+% se pueden redefinir aquí:
+%\title{Titulo corto}
+%\author{Autores abreviado}
+
+%% LICENCIA DE REDISTRIBUCION DE LAS TRANSPAS
+\frame{
+~
+\vspace{3cm}
+
+\begin{flushright}
+\includegraphics[width=2.2cm]{figs/by-sa}
+
+{\tiny
+(cc) 2015 Gregorio Robles and Jesús Moreno León\\
+  Some rights reserved. This work licensed under Creative Commons \\
+  Attribution-ShareAlike License. To view a copy of full license, see \\
+  http://creativecommons.org/licenses/by-sa/3.0/ or write to \\
+  Creative Commons, 559 Nathan Abbott Way, Stanford, \\
+  California 94305, USA. \\
+\ \\
+Some of the figures have been taken from the Internet \\
+Source, and author and licence if known, is specified. \\
+For those images, \emph{fair use} applies.
+}
+\end{flushright}
+}
+%%
+
+\section{Seminario eMadrid sobre Pensamiento Computacional}
+
+
+%--------------------------------------------------------
+\usebackgroundtemplate{\includegraphics[width=18cm]{figs/AngryBirds.png}}
+
+\begin{frame}
+\frametitle{¿Qué es Scratch?}
+
+\begin{center}
+\Huge {\bf Programación para todos. Programar para aprender.}
+\end{center}
+
+\end{frame}
+
+\usebackgroundtemplate{}
+%--------------------------------------------------------
+%\usebackgroundtemplate{\includegraphics[width=18cm]{figs/stats.png}}
+
+\begin{frame}
+\frametitle{¿Quién usa Scratch?}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=10cm, height=6cm]{figs/stats.png}
+\end{center}
+\label{fig:stats}
+\end{figure}
+\begin{center}
+scratch.mit.edu/statistics
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------
+%\usebackgroundtemplate{\includegraphics[width=18cm]{figs/stats.png}}
+
+\begin{frame}
+\frametitle{¿Por qué una herramienta como Dr. Scratch? (I)}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=10cm, height=6cm]{figs/pylint.png}
+\end{center}
+\label{fig:pylint}
+\end{figure}
+\begin{center}
+Analizando un programa Python con Pylint
+\end{center}
+\end{frame}
+%--------------------------------------------------------
+%\usebackgroundtemplate{\includegraphics[width=18cm]{figs/stats.png}}
+
+\begin{frame}
+\frametitle{¿Por qué una herramienta como Dr. Scratch? (y II)}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=5cm, height=6cm]{figs/cara.png}
+\end{center}
+\label{fig:corrigiendo}
+\end{figure}
+\begin{center}
+Disfrutando de corregir proyectos Scratch
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------
+%\usebackgroundtemplate{\includegraphics[width=18cm]{figs/stats.png}}
+
+\begin{frame}
+\frametitle{Revisión de la literatura}
+\begin{columns}[T]
+    \begin{column}{1\textwidth}
+     \begin{block}{Evaluación de proyectos Scratch}
+\begin{itemize}
+  \item Varios marcos para realizar análisis manuales.
+  \item \texttt{Scrape}: Analizador del portfolio de un usuario para visualizar los bloques utilizados.
+  \item \texttt{Hairball}: Analizador estático de proyectos Scratch inspirado en \texttt{lint} para detectar errores de programación.
+\end{itemize}
+    \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Malos hábitos de programación con Scratch (I)}
+
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=7cm, height=6cm]{figs/SpriteNaming.png}
+\end{center}
+\label{fig:naming}
+\end{figure}
+
+\begin{center}
+Nombres de personajes \emph{incorrectos}/por defecto
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Malos hábitos de programación con Scratch (y II)}
+
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+ 
+     \begin{block}{Ejemplo de código repetido}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=5.4cm,height=2.5cm]{figs/CodeRepetition1.png}
+\end{center}
+\label{fig:repetition1}
+\end{figure}
+     \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+     \begin{block}{Evitar la repetición de código}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=5.4cm,height=2.5cm]{figs/CodeRepetition2.png}
+\end{center}
+Deben definirse bloques para evitar la repetición de código
+\label{fig:repetition2}
+\end{figure}
+     \end{block}
+
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+%--------------------------------------------------------
+%--------------------------------------------------------
+\usebackgroundtemplate{\includegraphics[width=13cm,height=9.2cm]{figs/plugins.png}}
+% background: http://25.media.tumblr.com/b83aa72682992ab34b8ce7e61c0cb7f9/tumblr_menxc7qcq61ryin08o1_r1_1280.jpg
+\begin{frame}
+\frametitle{Desarrollo de plug-ins para \texttt{Hairball}}
+
+  \begin{columns}[T]
+    \begin{column}{1\textwidth}
+     \begin{block}{\vspace{0.1cm}\center{Desarrollamos dos plug-ins para \texttt{Hairball} para detectar automáticamente estos malos hábitos de programación}\vspace{0.1cm}}
+\vspace{0.3cm}
+\begin{enumerate}
+  \item convention.SpriteNaming
+\vspace{0.15cm}
+  \item duplicate.DuplicateScripts
+\end{enumerate}
+\vspace{0.4cm}
+    \end{block}
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+\usebackgroundtemplate{}
+
+%--------------------------------------------------------
+%\usebackgroundtemplate{\includegraphics[width=13cm]{figs/iceberg.jpg}}
+% background: http://www.wim-network.org/wp-content/uploads/2012/04/iceberg.jpg
+
+\begin{frame}
+\frametitle{Análisis del repositorio de proyectos Scratch}
+
+\begin{table}
+\begin{center}
+  \begin{tabular}{ | l | c | c | c |}
+   \hline
+              & Nombres por def. & Prog. Duplicados & Bloques propios \\ \hline\hline
+    Proyectos & 79 & 62 & 17 \\ \hline
+    Media & 5.94 & 7.23 & 1.11 \\ \hline
+    Mediana & 3 & 2 & 0 \\ \hline
+    Máximo & 67 & 71 & 25 \\
+    \hline    
+  \end{tabular}
+\end{center}
+\caption{Análisis de 100 proyectos Scratch descargados aleatoriamente}
+\label{table:results}
+\end{table}
+\end{frame}
+
+%--------------------------------------------------------
+\usebackgroundtemplate{\includegraphics[width=13cm, height=9cm]{figs/drscratch.png}}
+% background: http://www.wim-network.org/wp-content/uploads/2012/04/iceberg.jpg
+
+\begin{frame}
+\frametitle{Dr. Scratch}
+
+\end{frame}
+
+\usebackgroundtemplate{}
+
+%--------------------------------------------------------
+%\usebackgroundtemplate{\includegraphics[width=13cm]{figs/iceberg.jpg}}
+% background: http://www.wim-network.org/wp-content/uploads/2012/04/iceberg.jpg
+
+\begin{frame}
+\frametitle{Dr. Scratch: análisis del Pensamiento Computacional (I)}
+\begin{table}[t]\tiny 
+\centering
+%\begin{tabular}{p{2.5cm}p{2.7cm}p{3cm}p{4cm}}
+\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+%\toprule
+\hline
+Componente PC & Básico & En desarrollo & Avanzado\\ %\midrule 
+\hline
+\hline  
+Representación de la información & modifiers of sprites properties &
+operations on vars & operations on lists  \\
+\hline
+Pensamiento Lógico & if & if else & logic operations \\ 
+\hline
+Interactividad con el usuario & green flag & key pressed, sprite clicked, ask and wait,
+mouse blocks & when \%s is \textgreater \%s, video, audio \\ 
+\hline
+Control de flujo & sequence of blocks & repeat, forever & repeat until \\ 
+\hline
+Abstracción & more than one script and more than one sprite & def block & when I start as clone\\
+\hline
+Paralelismo & Two scripts on green flag & Two scripts on key pressed, two scripts on sprite clicked on the same sprite & Two scripts on when I receive message, create clone, two scripts when \%s is \textgreater \%s, two scripts on when backdrop change to \\
+\hline
+Sincronización & wait & Broadcast, when I receive message, stop all, stop program, stop programs sprite & wait until, when backdrop change to, broadcast and wait \\ 
+\hline
+\end{tabular}
+\caption{Nivel de desarrollo para cada componente del Pensamiento Computacional.}
+\label{table:CTscore}
+\end{table}
+
+\end{frame}
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Dr. Scratch: análisis del Pensamiento Computacional (II)}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=11cm, height=5cm]{figs/logica.png}
+\end{center}
+\label{fig:logic}
+\end{figure}
+\begin{center}
+Midiendo el desarrollo del Pensamiento Lógico
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Dr. Scratch: análisis del Pensamiento Computacional (II)}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[height=6cm]{figs/Data.png}
+\end{center}
+\label{fig:logic}
+\end{figure}
+\begin{center}
+Midiendo el desarrollo de la representación de información
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Dr. Scratch: detección de malos hábitos}
+\begin{columns}[T]
+    \begin{column}{0.8\textwidth}
+     \begin{block}{Errores o malas prácticas detectadas}
+\begin{itemize}
+  \item Código muerto
+  \item Inicialización de atributos
+  \item Nombres por defecto
+  \item Programas repetidos
+\end{itemize}
+    \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%--------------------------------------------------------
+\usebackgroundtemplate{\includegraphics[width=13cm]{figs/TallerProfes.jpg}}
+\begin{frame}
+\frametitle{Taller de Dr. Scratch para docentes}
+
+\end{frame}
+\usebackgroundtemplate{}
+%--------------------------------------------------------
+\usebackgroundtemplate{\includegraphics[width=15cm,height=9cm]{figs/TallerCEIP.jpg}}
+\begin{frame}
+\frametitle{Taller de Dr. Scratch para estudiantes}
+\begin{columns}[T]
+    \begin{column}{0.8\textwidth}
+     \begin{block}{Aprendiendo con Dr. Scratch}
+     \begin{table}
+\begin{center}
+  \begin{tabular}{ | l | c |}
+   \hline
+      & Puntuación PC \\ \hline\hline
+    Pre & 12.43 \\ \hline
+    Post & 13.87 \\ \hline
+    Mejora & 1.44  \\ \hline
+    \hline    
+  \end{tabular}
+\end{center}
+\caption{Análisis de la evolución de los proyectos}
+\label{table:results}
+\end{table}
+    \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+\usebackgroundtemplate{}
+
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Dr. Scratch para fomentar el Pensamiento Computacional}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=9cm, height=6cm]{figs/EdadParticipantes.png}
+\end{center}
+\label{fig:logic}
+\end{figure}
+\begin{center}
+Edad de los 109 participantes en el estudio
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Dr. Scratch para fomentar el Pensamiento Computacional}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=9cm, height=6cm]{figs/WebAtractiva.png}
+\end{center}
+\label{fig:logic}
+\end{figure}
+\begin{center}
+Visita drscratch.org. ¿Te parece una web atractiva?
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Dr. Scratch para fomentar el Pensamiento Computacional}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=9cm, height=6cm]{figs/SencillezAnalisis.png}
+\end{center}
+\label{fig:logic}
+\end{figure}
+\begin{center}
+Analiza un proyecto. ¿Te ha resultado sencillo realizar el análisis?
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Dr. Scratch para fomentar el Pensamiento Computacional}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=9cm, height=6cm]{figs/SentimientosResultados.png}
+\end{center}
+\label{fig:logic}
+\end{figure}
+\begin{center}
+¿Cómo te has sentido al ver los resultados?
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Dr. Scratch para fomentar el Pensamiento Computacional}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=9cm, height=6cm]{figs/LegibilidadInforme.png}
+\end{center}
+\label{fig:logic}
+\end{figure}
+\begin{center}
+¿Te resulta comprensible la información de la página de resultados?
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Dr. Scratch para fomentar el Pensamiento Computacional}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=9cm, height=6cm]{figs/ProbarCosasNuevas.png}
+\end{center}
+\label{fig:logic}
+\end{figure}
+\begin{center}
+¿Tienes ganas de mejorar tu proyecto probando algo nuevo?
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}
+\frametitle{Dr. Scratch para fomentar el Pensamiento Computacional}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=9cm, height=6.5cm]{figs/ScatterPlotPrePost.png}
+\end{center}
+\label{fig:logic}
+\end{figure}
+\begin{center}
+Resultados del análisis previo y posterior a Dr. Scratch
+\end{center}
+\end{frame}
+
+%--------------------------------------------------------
+%\usebackgroundtemplate{\includegraphics[width=13cm]{figs/take-away.jpg}}
+% background: http://2.bp.blogspot.com/-78Eh4TBpdtU/UPw7ULV73PI/AAAAAAAAHAE/6DQfvPNCo-Y/s1600/8723052-stylized-red-stamp-showing-the-term-take-away-all-on-white-background.jpg
+\usebackgroundtemplate{\includegraphics[width=13cm]{figs/future.png}}
+
+\begin{frame}
+\frametitle{Trabajos futuros}
+
+\begin{enumerate}
+  \item Cuentas de usuario.
+  \item Cuentas para docentes.
+  \item Gamificación y red social.
+  \item Plug-ins para navegadores.
+  \item Correlación con otros marcos de evaluación.
+\end{enumerate}
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+\hfill{\Tiny Background picture: Simon Cunningham }
+
+\end{frame}
+
+%--------------------------------------------------------
+%\usebackgroundtemplate{\includegraphics[width=13cm]{figs/take-away.jpg}}
+% background: http://2.bp.blogspot.com/-78Eh4TBpdtU/UPw7ULV73PI/AAAAAAAAHAE/6DQfvPNCo-Y/s1600/8723052-stylized-red-stamp-showing-the-term-take-away-all-on-white-background.jpg
+\usebackgroundtemplate{\includegraphics[width=13cm, height=9cm]{figs/thanks.jpg}}
+
+\begin{frame}
+\frametitle{Agradecimientos}
+
+\begin{columns}[T]
+    \begin{column}{0.8\textwidth}
+     \begin{block}{Entidades y personas que hacen posible el proyecto}
+\begin{itemize}
+  \item FECYT
+  \item Google
+  \item Microsoft
+  \item Programamos
+  \item eMadrid network
+  \item MariLuz, Eva y Cristian
+\end{itemize}
+    \end{block}
+    \end{column}
+  \end{columns}\vspace{\baselineskip}
+\vspace{\baselineskip}
+\hfill{\Tiny Background picture: dailywaffle.co.uk }
+\end{frame}
+%--------------------------------------------------------
+\usebackgroundtemplate{}
+\begin{frame}
+\frametitle{Concurso de programación con Scratch}
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=9cm, height=6.5cm]{figs/contest.png}
+\end{center}
+\label{fig:logic}
+\end{figure}
+\begin{center}
+drscratch.org/contest
+\end{center}
+\end{frame}
+
+\usebackgroundtemplate{}
+
+%--------------------------------------------------------
+\frame{
+\maketitle
+\begin{center}
+\includegraphics[width=2cm]{format/libresoft-logo}
+\hspace{0.5cm}
+\includegraphics[width=5cm]{format/gsyc-urjc}
+\vspace{0.5cm}
+\includegraphics[width=3cm]{format/emadrid.png}
+\end{center}
+}
+
+\end{document}

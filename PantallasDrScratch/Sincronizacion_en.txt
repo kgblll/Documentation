@@ -1,0 +1,26 @@
+
+Synchronization
+
+Synchronization instructions allow us to manage our characters so things happen in the order we want.
+
+[0 points]
+
+The easiest way to synchronize the behavior of your characters is using a "wait" block, which makes the character wait the number of seconds we indicate. Let's see an example of how this block can be used to synchronize two characters:
+
+In this case the "wait" blocks have been used to synchronize these two characters to keep a conversation, so that while one of them speaks, the other one waits, and vice versa. Note that the number of seconds that each character waits is equal to the number of seconds that the other sprite speaks, so they never speak at the same time.
+
+[1 points]
+
+Synchronization using "wait" blocks is simple when programs are small and have few characters. However when programs are bigger, or when they have several characters, or when conditions to generate a reaction can not be measured previously, it is more efficient to use other ways of synchronization, such as messages. Here's an example:
+
+How do these sync blocks work? When a situation occurs on a character that we want to cause a reaction in another sprite, we can use messages. In the example, when the mouse touches the cat, the message "Got you" is sent, which will be broadcasted to all the characters in the project. Thus, when the butterfly receives the "Got you" message the instructions under the block "When I receive Got you" run. Therefore, when the user touches the cat with the mouse, the butterfly will say, "You caught my buddy. Now you have to catch me!"
+
+
+[2 points]
+
+In addition to sending messages, you can synchronize characters to make things happen in the order we want using other blocks, such as "wait until" or "when backdrop switches to ...".
+
+In the first example, when the program execution reaches that point it will stop until the condition is met (in this case until lives equals 0). When lives equals 0, the program will continue the execution of the remaining blocks, in this case "say Game Over" and "stop all", which will end the execution of the project.
+
+In the second example, the time when the stage switches to the backdrop under the name "Springtime", the character will execute the blocks placed following the instruction "when background switches to Springtime" (to be displayed and "say spring has come").
+
