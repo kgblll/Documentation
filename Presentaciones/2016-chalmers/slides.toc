@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{What is CT?}{5}{0}{1}
+\beamer@sectionintoc {2}{Learn to code}{11}{0}{2}
+\beamer@sectionintoc {3}{Code to learn}{34}{0}{3}
