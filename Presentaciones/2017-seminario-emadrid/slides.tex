@@ -1,0 +1,194 @@
+%
+% $Id: $
+%
+%
+% Compilar a .pdf con LaTeX (pdflatex)
+% Es necesario instalar Beamer (paquete latex-beamer en Debian)
+%
+
+%
+% Gráficos:
+% Los gráficos pueden suministrarse en PNG, JPG, TIF, PDF, MPS
+% Los EPS deben convertirse a PDF (usar epstopdf)
+%
+
+\documentclass{beamer}
+\usetheme{Warsaw}
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{format/libresoft-bg.png}}
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphics}
+\usepackage{amssymb} % Simbolos matematicos
+\usepackage{url}
+\usepackage{multirow}
+
+
+%\definecolor{libresoftgreen}{RGB}{162,190,43}
+%\definecolor{libresoftblue}{RGB}{0,98,143}
+
+%\setbeamercolor{titlelike}{bg=libresoftgreen}
+
+%% Metadatos del PDF.
+\hypersetup{
+  pdftitle={El repositorio de proyectos Scratch: nuevas oportunidades de investigación y su impacto en la educación},
+  pdfauthor={Jesús Moreno León, Gregorio Robles, Marcos Román González},
+  pdfcreator={Kindergarten and Beyond - Lifelong Learning Research Group (KGB-L3) \\ Universidad Rey Juan Carlos},
+  pdfproducer=PDFLaTeX,
+  pdfsubject={Social Coding, Learning},
+}
+%%
+
+\begin{document}
+
+\title{El repositorio de proyectos Scratch}
+\subtitle{Nuevas oportunidades de investigación y su impacto en la educación}
+\institute{jesus.moreno@programamos.es, grex@gsyc.urjc.es, mroman@edu.uned.es \\ 
+\ \\
+Kindergarten and Beyond - Lifelong Learning Research Group (KGB-L3) \\ Universidad Rey Juan Carlos (Madrid, Spain)}
+\author{Jesús Moreno León, Gregorio Robles, Marcos Román González}
+\date{Seminario eMadrid, 20 de enero de 2017}
+
+\frame{
+\maketitle
+\begin{center}
+\includegraphics[width=2cm]{format/libresoft-logo}
+\hspace{0.5cm}
+\includegraphics[width=5cm]{format/gsyc-urjc}
+\vspace{0.5cm}
+\includegraphics[width=3cm]{format/emadrid.png}
+\end{center}
+}
+
+
+% Si el titulo o el autor se quieren acortar para los pies de página
+% se pueden redefinir aquí:
+%\title{Titulo corto}
+%\author{Autores abreviado}
+
+%% LICENCIA DE REDISTRIBUCION DE LAS TRANSPAS
+\frame{
+~
+\vspace{3cm}
+
+\begin{flushright}
+\includegraphics[width=2.2cm]{figs/by-sa}
+
+{\tiny
+(cc) 2017 Jesús MorenoLeón, Gregorio Robles, Marcos Román González\\
+  Some rights reserved. This work licensed under Creative Commons \\
+  Attribution-ShareAlike License. To view a copy of full license, see \\
+  http://creativecommons.org/licenses/by-sa/3.0/ or write to \\
+  Creative Commons, 559 Nathan Abbott Way, Stanford, \\
+  California 94305, USA. \\
+\ \\
+Some of the figures have been taken from the Internet \\
+Source, and author and licence if known, is specified. \\
+For those images, \emph{fair use} applies.
+}
+\end{flushright}
+}
+%%
+
+\section{Seminario eMadrid, 20 de enero de 2017}
+
+
+%%--------------------------------------------------------
+
+\usebackgroundtemplate{\includegraphics[width=11cm]{figs/socialcoding.png}}
+%background: http://quickfixes.github.io/just-gittin-started/img/benevocats.png
+
+\begin{frame}
+\frametitle{Programación social}
+  \begin{center}  
+    \LARGE En los últimos años ha surgido un movimiento que considera que la \textbf{socialización} es un factor muy importante en el desarrollo de software
+  \end{center}
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+\vspace{1cm}
+\hfill{\Tiny Background picture: QuickFixes}
+%
+\end{frame}
+
+\usebackgroundtemplate{}
+
+%%--------------------------------------------------------
+\usebackgroundtemplate{\includegraphics[width=12cm]{figs/github.png}}
+\begin{frame}
+\frametitle{Programación social}
+  \begin{center}  
+    {\Large Plataformas que integran funcionalidades de redes sociales con herramientas de gestión de código}
+  \end{center}
+  \scriptsize
+  \begin{table}
+    \begin{center}
+      \begin{tabular}{ l  c  c  c  c  c  c }
+        
+           & Público & Explorar & Seguir & Valorar & Reinventar & Evolución \\ \hline \hline
+         \textbf{Github} & Desarrolladores & Sí & Sí & Sí & Forks & Sí \\ 
+        \hline    
+      \end{tabular}
+    \end{center}
+    \label{table:results}
+  \end{table}
+  
+  
+\end{frame}
+
+\usebackgroundtemplate{}
+
+%%--------------------------------------------------------
+\usebackgroundtemplate{\includegraphics[width=18cm]{figs/AngryBirds2.png}}
+\begin{frame}
+\frametitle{Programación social}
+  \begin{center}  
+    {\Large Plataformas que integran funcionalidades de redes sociales con herramientas de gestión de código}
+  \end{center}
+  \scriptsize
+  \begin{table}
+    \begin{center}
+      \begin{tabular}{ l  c  c  c  c  c  c }
+        
+           & Público & Explorar & Seguir & Valorar & Reinventar & Evolución \\ \hline \hline
+         \textbf{Github} & Desarrolladores & Sí & Sí & Sí & Forks & Sí \\
+         \textbf{Scratch} & Aprendices & Sí & Sí & Sí & Remix & No \\ 
+        \hline    
+      \end{tabular}
+    \end{center}
+    \label{table:results}
+  \end{table}
+  
+  
+\end{frame}
+
+\usebackgroundtemplate{}
+
+%--------------------------------------------------------
+\usebackgroundtemplate{\includegraphics[width=14cm]{figs/goals.jpg}}
+%https://rebel-performance.com/wp-content/uploads/2014/10/goals.jpg
+
+\begin{frame}
+\frametitle{Objetivos}
+
+\begin{enumerate}
+\item \Large  {\bf ¿Relación entre participación en la comunidad Scratch y mejora en habilidades de programación?}\\
+\item \Large  {\bf ¿Relación entre realización de remixes y mejora en habilidades de programación?}\\
+\item \Large  {\bf ¿Cómo afecta el tiempo que se pasa en la comunidad a 1 y 2?}
+\end{enumerate}
+\hfill{\Tiny Background picture: Rebel-performance}
+\end{frame}
+
+\usebackgroundtemplate{}
+
+%--------------------------------------------------------
+\frame{
+\maketitle
+\begin{center}
+\includegraphics[width=2cm]{format/libresoft-logo}
+\hspace{0.5cm}
+\includegraphics[width=5cm]{format/gsyc-urjc}
+\vspace{0.5cm}
+\includegraphics[width=3cm]{format/emadrid.png}
+\end{center}
+}
+
+\end{document}
