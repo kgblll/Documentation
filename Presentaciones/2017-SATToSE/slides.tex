@@ -21,6 +21,15 @@
 \usepackage{amssymb} % Simbolos matematicos
 \usepackage{url}
 
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+
+
 %\definecolor{libresoftgreen}{RGB}{162,190,43}
 %\definecolor{libresoftblue}{RGB}{0,98,143}
 
@@ -38,11 +47,11 @@
 
 \begin{document}
 
-\title{Can we Measure Computational Thinking with Tools? Present and Future of Dr. Scratch}
+\title[Present and Future of Dr. Scratch]{Can we Measure Computational Thinking with Tools? Present and Future of Dr. Scratch}
 \institute{jesus.moreno@programamos.es, grex@gsyc.urjc.es, mroman@edu.uned.es \\
 GSyC/Libresoft, Universidad Rey Juan Carlos}
-\author{Jesús Moreno-León, Gregorio Robles \& Marcos Rom\'an-Gonz\'alez}
-\date{SATToSE: Seminar Series on Advanced Techniques \& Tools for Software Evolution \\ Madrid. June 7, 2017}
+\author[Jesús Moreno-León]{Jesús Moreno-León, Gregorio Robles, \\ Marcos Rom\'an-Gonz\'alez}
+\date{SATToSE, Madrid, June 7\textsuperscript{th}, 2017}
 
 \frame{
 \maketitle
@@ -50,7 +59,7 @@ GSyC/Libresoft, Universidad Rey Juan Carlos}
 \includegraphics[width=2cm]{format/libresoft-logo}
 \hspace{0.5cm}
 \includegraphics[width=5cm]{format/gsyc-urjc}
-\vspace{0.5cm}
+%\vspace{0.5cm}
 \includegraphics[width=3cm]{format/emadrid.png}
 \end{center}
 }
@@ -68,7 +77,7 @@ GSyC/Libresoft, Universidad Rey Juan Carlos}
 
 \begin{flushright}
 \includegraphics[width=2.2cm]{figs/by-sa}
-
+\vspace{0.4cm}
 {\tiny
 (cc) 2017 Jesús Moreno León, Gregorio Robles and Marcos Rom\'an Gonz\'alez\\
   Some rights reserved. This work licensed under Creative Commons \\
@@ -96,7 +105,7 @@ For those images, \emph{fair use} applies.
 
 \begin{figure}[t!]
 \begin{center}
-\includegraphics[width=9cm]{figs/drscratch1.png}
+\includegraphics[width=9.4cm]{figs/drscratch1.png}
 \end{center}
 \label{fig:naming}
 \end{figure}
