@@ -23,6 +23,12 @@
 \usepackage{multirow}
 \usepackage{subfigure}
 
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
 
 %\definecolor{libresoftgreen}{RGB}{162,190,43}
 %\definecolor{libresoftblue}{RGB}{0,98,143}
@@ -76,7 +82,7 @@
 
 \begin{flushright}
 \includegraphics[width=2.2cm]{figs/by-sa}
-
+\vspace{0.3cm} \\
 {\tiny
 (cc) 2018 Jesús Moreno-León, Gregorio Robles, Marcos Román\\
   Some rights reserved. This work licensed under Creative Commons \\
@@ -86,25 +92,48 @@
   California 94305, USA. \\
 \ \\
 Some of the figures have been taken from the Internet \\
-Source, and author and licence if known, is specified. \\
+Source, and author and license if known, is specified. \\
 For those images, \emph{fair use} applies.
 }
 \end{flushright}
 }
 %%
 
+
 %--------------------------------------------------------
 
 \begin{frame}
-\frametitle{We still don't know what Computational Thinking is...}
+\frametitle{Authors}
 
-\begin{figure}[htb!]
-  \centering
-  \includegraphics[width=.95\columnwidth]{figs/CT-cloudword.jpg}
-  \caption{The term CT is ambiguious and vague}
-  \label{fig:CT-cloud}
-\end{figure}
+\begin{center}
+	\begin{figure}[t!]
+		\includegraphics[width=2.5cm,height=2.8cm]{figs/jemole}
+		\hspace{0.6cm}
+		\includegraphics[width=2.5cm,height=2.8cm]{figs/gregoriorobles}    
+    	\hspace{0.9cm}
+		\includegraphics[width=2.5cm,height=2.8cm]{figs/marcos}
+%        \vspace{0.4cm}
+		\\ \hspace{0.3cm} Jes\'us Moreno-Le\'on \hspace{0.2cm} Gregorio Robles \hspace{0.1cm}  Marcos Rom\'an-Gonz\'alez
+		\vspace{0.1cm}
+		\\ INTEF \hspace{2cm} URJC \hspace{2.3cm} UNED
+	\end{figure}
+\end{center}
 
+
+\end{frame}
+
+
+%%--------------------------------------------------------
+
+\begin{frame}
+\frametitle{History of learning \emph{with} computers}
+\begin{center}
+        \begin{figure}[t!]
+                \includegraphics[width=11cm]{figs/history.png}
+                \caption{You are here!}
+        \end{figure}
+        \tiny Source: \textit{REaCT EU project proposal}
+\end{center}
 
 \end{frame}
 
@@ -137,13 +166,31 @@ For those images, \emph{fair use} applies.
   \item Computation
   \item Memory
   \item Parallelism
-  \item Queueing
+  \item Queuing
   \item and Design
 \end{enumerate}
      \end{block}
 
     \end{column}
   \end{columns}
+
+
+\end{frame}
+
+\usebackgroundtemplate{}
+
+
+%--------------------------------------------------------
+
+\begin{frame}
+\frametitle{We still don't know what Computational Thinking is...}
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=.95\columnwidth]{figs/CT-cloudword.jpg}
+  \caption{The term CT is ambiguous and vague... but it is not computing!}
+  \label{fig:CT-cloud}
+\end{figure}
 
 
 \end{frame}
@@ -160,7 +207,7 @@ For those images, \emph{fair use} applies.
 \begin{figure}[htb!]
   \centering
   \includegraphics[width=.63\columnwidth]{figs/CT1.png}
-  \caption{Computational thinking: only 27\% of its variance can be explained by the four primary mental abilities.}
+  \caption{Computational thinking: only 27\% of its variance can be explained by the four primary mental abilities (i.e., reasoning ability, visual ability, verbal ability, and numerical ability).}
   \label{fig:CT1}
 \end{figure}
 
@@ -187,8 +234,6 @@ For those images, \emph{fair use} applies.
 \usebackgroundtemplate{}
 
 
-
-
 %--------------------------------------------------------
 
 \begin{frame}
@@ -205,7 +250,7 @@ For those images, \emph{fair use} applies.
 \label{fig:unplugged}
 \end{figure}
 \begin{center}
-Unplugged activites \\ (no use of digital devices)
+Unplugged activities \\ (no use of digital devices)
 \end{center}
      \end{block}
     \end{column}
@@ -230,28 +275,13 @@ Several ways (arrow-based, block-based, textual, connected to physical world)
 
 \usebackgroundtemplate{}
 
-%%--------------------------------------------------------
-
-\begin{frame}
-\frametitle{History of learning \emph{with} computers}
-\begin{center}
-        \begin{figure}[t!]
-                \includegraphics[width=11cm]{figs/history.png}
-                \caption{You are here!}
-        \end{figure}
-        \tiny Source: \textit{REaCT EU project proposal}
-\end{center}
-
-\end{frame}
-
-\usebackgroundtemplate{}
 
 
 
 %%--------------------------------------------------------
 
 \begin{frame}
-\frametitle{Code to learn vs. learn to code}
+\frametitle{What should be the approach?}
 
 \vspace{-0.4cm}
 \begin{center}
@@ -266,13 +296,35 @@ Several ways (arrow-based, block-based, textual, connected to physical world)
 \usebackgroundtemplate{}
 
 
+
+
+%%--------------------------------------------------------
+
+\begin{frame}
+\frametitle{We argue for ``Code to learn''}
+
+\vspace{-0.4cm}
+\begin{center}
+        \begin{figure}[t!]
+                \includegraphics[width=10cm]{figs/resnick.png}
+                \caption{Mitch Resnick (MIT Media Lab)}
+        \end{figure}
+\end{center}
+
+\end{frame}
+
+\usebackgroundtemplate{}
+
+
+
+
 %%--------------------------------------------------------
 
 \usebackgroundtemplate{}
 %background: 
 
 \begin{frame}
-\frametitle{Maths}
+\frametitle{Code to learn: Maths}
 
 \begin{figure}[h!]
   \centering
@@ -292,7 +344,7 @@ Several ways (arrow-based, block-based, textual, connected to physical world)
 %background: 
     
 \begin{frame}
-\frametitle{Social sciences}
+\frametitle{Code to learn: Social sciences}
 
 
 \begin{figure}[h!]
@@ -312,7 +364,7 @@ Several ways (arrow-based, block-based, textual, connected to physical world)
 %background: 
 
 \begin{frame}
-\frametitle{Arts}
+\frametitle{Code to learn: Arts}
 
 
 \begin{figure}[h!]
@@ -330,7 +382,7 @@ Several ways (arrow-based, block-based, textual, connected to physical world)
 
 %--------------------------------------------------------
 \begin{frame}
-\frametitle{Social learning}
+\frametitle{Code to learn: Social learning}
 
 \begin{figure}[h!]
 \begin{subfigure}
@@ -413,7 +465,7 @@ formative assessment tool
     \end{column}
   \end{columns}
 \begin{center}
-Other methods exist, such as Bebras \\ (which asseses skill transference)
+Other methods exist, such as Bebras \\ (which assesses skill transference)
 \end{center}
 
 
@@ -432,9 +484,10 @@ Other methods exist, such as Bebras \\ (which asseses skill transference)
 \frametitle{Takeaways}
 
   \begin{enumerate}
-    \item Computational Thinking is becoming increasingly popular in recent times
-    \item Focus should not be placed exclusively on programming, but on the skills
+    \item Computational Thinking is a \emph{different} skill
+    \item We argue that focus should not be on programming, but on (transversal) skills
     \item We need more research on the impact of CT on other subjects, including tools that facilitate this task
+    \item Social skills are also to be taken into account
     \item We need better assessment tools
   \end{enumerate}
 
@@ -456,11 +509,11 @@ Other methods exist, such as Bebras \\ (which asseses skill transference)
 \begin{columns}[T]
     \begin{column}{1\textwidth}
      \begin{block}{Some references}
-       \begin{itemize}
-	 \item Moreno-Le\'on, J., Robles, G, \& Roman-Gonz\'alez, M. (2015). Dr. Scratch: Automatic Analysis of Scratch Projects to Assess and Foster Computational Thinking. \textit{RED. Revista de Educación a Distancia, 15}(46).
-	 \item Moreno-Le\'on, J., Robles, G, \& Roman-Gonz\'alez, M. (2016). Comparing computational thinking development assessment scores with software complexity metrics. In \textit{Global Engineering Education Conference (EDUCON), 2016 IEEE}. IEEE.
-	 \item J. Moreno-León, G. Robles, and M. Román-González. Examining the Relationship between Socialization and Improved Software Development Skills in the Scratch Code Learning Environment. Journal of Universal Computer Science, 22(12), pp. 1533-1557, 2016.
-       \end{itemize}
+       \begin{enumerate}
+	 \item J. Moreno-Le\'on, G. Robles, M. \& Roman-Gonz\'alez. ``Dr. Scratch: Automatic Analysis of Scratch Projects to Assess and Foster Computational Thinking''. \textit{RED. Revista de Educación a Distancia, 15}(46). 2015
+	 \item J. Moreno-León, G. Robles, and M. Román-González. ``Examining the Relationship between Socialization and Improved Software Development Skills in the Scratch Code Learning Environment.'' Journal of Universal Computer Science, 22(12), pp. 1533-1557. 2016
+	 \item M. Román-González, J.C. Pérez-González, J. Moreno-León, G. \& Robles. ``Extending the nomological network of computational thinking with non-cognitive factors.'' Computers in Human Behavior. 2018
+       \end{enumerate}
     \end{block}
     \end{column}
   \end{columns}
